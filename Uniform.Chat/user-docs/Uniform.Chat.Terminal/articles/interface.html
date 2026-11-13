@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface | Uniform Chat Terminal </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface | Uniform Chat Terminal ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Uniform Chat Terminal">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/install.html" title="Guide">Guide</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="install.html" title="Installing" class="">Installing</a>
+                    </li>
+                    <li class="">
+                      <a href="getting-started.html" title="Getting started" class="">Getting started</a>
+                    </li>
+                    <li class="active">
+                      <a href="interface.html" title="Interface" class="active">Interface</a>
+                    </li>
+                    <li class="">
+                      <a href="messages.html" title="Messages" class="">Messages</a>
+                    </li>
+                    <li class="">
+                      <a href="joining.html" title="Joining rooms" class="">Joining rooms</a>
+                    </li>
+                    <li class="">
+                      <a href="files.html" title="Files and images" class="">Files and images</a>
+                    </li>
+                    <li class="">
+                      <a href="encryption.html" title="Encryption and devices" class="">Encryption and devices</a>
+                    </li>
+                    <li class="">
+                      <a href="rooms.html" title="Room administration" class="">Room administration</a>
+                    </li>
+                    <li class="">
+                      <a href="server-admin.html" title="Server administration" class="">Server administration</a>
+                    </li>
+                    <li class="">
+                      <a href="commands.html" title="Commands" class="">Commands</a>
+                    </li>
+                    <li class="">
+                      <a href="settings.html" title="Settings" class="">Settings</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Chat.Terminal.Interface.Article">
+<h1 id="interface">Interface</h1>
+
+<pre><code class="lang-text"> File  Room  View  Help
+┌Rooms─────────────────┐┌General — Welcome to the general chat────────────┐┌Members (3)──────┐
+│ 1  General (2)       ││12:01 &lt;alice&gt; hi all                             ││alice            │
+│ 2 @bob               ││12:02 &lt;bob&gt; hello! this is a long message that   ││bob              │
+│ 3 +Secret project    ││            wraps under the text                 ││carol            │
+│                      ││12:02 -!- carol joined                           ││                 │
+│                      ││12:03  * alice waves                             ││                 │
+│                      ││12:04 &lt;you&gt; on my way  [sending…]                ││                 │
+└──────────────────────┘└─────────────────────────────────────────────────┘└─────────────────┘
+ hello everyone_
+ F1 Help │ Ctrl+N Rooms │ Ctrl+O Join │ Ctrl+Q Quit │ Connected as @you:matrix.org   bob typing…
+</code></pre>
+<ul>
+<li><strong>Menu bar</strong> (F10 or the mouse) has everything the client can do: File, Room, View and Help. Help → About shows the client's version.</li>
+<li><strong>Rooms</strong> lists invites (<code>+</code>), favourites, other rooms and low-priority rooms. Direct chats are marked <code>@</code>. The number is the Alt key for the room; unread counts are in brackets, and rooms that mention you are yellow.</li>
+<li><strong>Message log</strong> shows the selected room, with its name and topic in the frame. Long lines wrap under the text, own messages are cyan, and messages still being sent say <code>[sending…]</code>. A day change is marked with a line.</li>
+<li><strong>Members</strong> lists who is in the room, admins (<code>@</code>) and moderators (<code>%</code>) first, as in irssi; invited users are marked <code>+</code>. F2 hides it.</li>
+<li><strong>Input line</strong> sends what you type to the room. Lines starting with <code>/</code> are commands.</li>
+<li><strong>Status bar</strong> shows key hints, the connection state and who is typing. Others see when you are typing too.</li>
+</ul>
+<p>Messages you write are stored first and sent in order, so they survive a lost connection or a restart. If the server refuses one, for example because you left the room, it is shown in red with the reason.</p>
+<h2 id="menus">Menus</h2>
+<table>
+<thead>
+<tr>
+<th>Menu</th>
+<th>Items</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File</td>
+<td>Encryption, Verify this device, Devices, Settings, Log out, Quit</td>
+</tr>
+<tr>
+<td>Room</td>
+<td>Join, Room directory, New room, New public room, Direct message, Send file, Invite, Set topic, Set name, Set avatar, Add alias, Directory listing, Power level, Kick, Ban, Unban, Enable encryption, Leave</td>
+</tr>
+<tr>
+<td>View</td>
+<td>Older messages, Members, Select message, Logs, Audio test, Next room, Previous room</td>
+</tr>
+<tr>
+<td>Help</td>
+<td>Commands and keys, About</td>
+</tr>
+</tbody>
+</table>
+<h2 id="keys">Keys</h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alt+1 … Alt+9</td>
+<td>Go to room 1–9</td>
+</tr>
+<tr>
+<td>Ctrl+N, Ctrl+P</td>
+<td>Next, previous room</td>
+</tr>
+<tr>
+<td>Up, Down in the room list</td>
+<td>Look through rooms; focus stays in the list (click the list, or press Tab on an empty input line, to get there)</td>
+</tr>
+<tr>
+<td>Enter in the room list</td>
+<td>Type in the selected room; for an invite, join or reject it</td>
+</tr>
+<tr>
+<td>PageUp, PageDown</td>
+<td>Scroll messages</td>
+</tr>
+<tr>
+<td>Ctrl+PageUp</td>
+<td>Load older messages</td>
+</tr>
+<tr>
+<td>Ctrl+O</td>
+<td>Join a room</td>
+</tr>
+<tr>
+<td>Ctrl+R</td>
+<td>Room directory, also of other servers</td>
+</tr>
+<tr>
+<td>F1</td>
+<td>Help</td>
+</tr>
+<tr>
+<td>F2</td>
+<td>Show or hide members</td>
+</tr>
+<tr>
+<td>Ctrl+Up, Enter</td>
+<td>Select a message and act on it</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>Complete a member's name; at the start of the line it adds <code>: </code></td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>Cancel a reply or edit; leave the message log</td>
+</tr>
+<tr>
+<td>F10</td>
+<td>Open the menu</td>
+</tr>
+<tr>
+<td>Ctrl+Q</td>
+<td>Quit</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.Chat.Terminal/articles/interface.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat Terminal</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

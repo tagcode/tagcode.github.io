@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>User Management | Uniform Chat Server </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="User Management | Uniform Chat Server ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Uniform Chat Server">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/install.html" title="Guide">Guide</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="install.html" title="Installing" class="">Installing</a>
+                    </li>
+                    <li class="">
+                      <a href="dashboard.html" title="Run with the dashboard" class="">Run with the dashboard</a>
+                    </li>
+                    <li class="">
+                      <a href="service.html" title="Run without the dashboard" class="">Run without the dashboard</a>
+                    </li>
+                    <li class="">
+                      <a href="settings.html" title="Settings" class="">Settings</a>
+                    </li>
+                    <li class="active">
+                      <a href="usermanagement.html" title="User Management" class="active">User Management</a>
+                    </li>
+                    <li class="">
+                      <a href="remote-admin.html" title="Remote administration" class="">Remote administration</a>
+                    </li>
+                    <li class="">
+                      <a href="turn.html" title="Calls through firewalls" class="">Calls through firewalls</a>
+                    </li>
+                    <li class="">
+                      <a href="livekit.html" title="Video calls in Element X" class="">Video calls in Element X</a>
+                    </li>
+                    <li class="">
+                      <a href="clients.html" title="Connecting clients" class="">Connecting clients</a>
+                    </li>
+                    <li class="">
+                      <a href="files.html" title="Files" class="">Files</a>
+                    </li>
+                    <li class="">
+                      <a href="updating.html" title="Updating" class="">Updating</a>
+                    </li>
+                    <li class="">
+                      <a href="troubleshooting.html" title="Troubleshooting" class="">Troubleshooting</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Chat.Server.UserManagement.Article">
+<h1 id="user-management">User Management</h1>
+
+<p>The server starts with registration disabled, so nobody can create an account by themselves. The simplest way to add people is the dashboard: Server → Users → New (see <a class="xref" href="dashboard.html#users-window">Users window</a>).</p>
+<p>To let people register in their own account:</p>
+<ol>
+<li><p>Start the server with registration open, or with tokens:</p>
+<pre><code class="lang-bash">./uniform-chat-server --Server:Registration=Open
+./uniform-chat-server --Server:Registration=Token --Server:RegistrationTokens=let-me-in
+</code></pre>
+<p>Or change <code>Server:Registration</code> in the settings window and Apply, as above.</p>
+</li>
+<li><p>Register in a client that lets you type the homeserver address, such as the Uniform Chat apps or Element Desktop: choose &quot;Create account&quot;, give the homeserver <code>http://localhost:8008</code>, and with <code>Token</code> the token.</p>
+</li>
+<li><p>Close registration again when you are done.</p>
+</li>
+</ol>
+<p>To have new users accept your terms of service or privacy policy, set <code>Server:TermsUrl</code> and <code>Server:PrivacyPolicyUrl</code> to the addresses of the documents. Registering then shows them with their links, and the account is created only after the user accepts them. When you change the documents, raise <code>Server:PoliciesVersion</code>.</p>
+<h2 id="deleting-accounts">Deleting accounts</h2>
+<p>Users can delete their own account from their client, confirming with their password; in the Uniform Chat apps, see their guides. The account is deactivated: the user leaves every room, their display name and avatar are cleared, every device is logged out, and the password no longer works. The user ID stays taken, so nobody can register it again and pose as them. Messages they sent stay in the rooms.</p>
+<p>The admin can deactivate and reactivate accounts in the dashboard's Users window.</p>
+<h2 id="from-a-client">From a client</h2>
+<p>Accounts with server admin rights can also manage accounts, registration tokens, reports and rooms from a client, e.g. the Server menu of the Uniform Chat terminal client. They can suspend or lock accounts, and send server notices. See <a class="xref" href="remote-admin.html">Remote administration</a>.</p>
+<p>Registration also works from the command line:</p>
+<pre><code class="lang-bash">curl -X POST http://localhost:8008/_matrix/client/v3/register \
+  -H 'Content-Type: application/json' \
+  -d '{&quot;username&quot;:&quot;alice&quot;,&quot;password&quot;:&quot;choose-a-password&quot;,&quot;auth&quot;:{&quot;type&quot;:&quot;m.login.dummy&quot;}}'
+</code></pre>
+<p>For <code>Token</code> registration, use <code>&quot;auth&quot;:{&quot;type&quot;:&quot;m.login.registration_token&quot;,&quot;token&quot;:&quot;let-me-in&quot;}</code>.</p>
+<p>The new user is <code>@alice:localhost</code>, or <code>@alice:</code> followed by the configured server name. Their display name starts out as their user name.</p>
+<h2 id="configure-from-dashboard">Configure from dashboard</h2>
+<p>When the server runs as a <a class="xref" href="service.html">system service</a> from the apt package, open the dashboard on the running service in a terminal; the service keeps serving meanwhile:</p>
+<pre><code class="lang-bash">sudo uniform-chat-server manage
+</code></pre>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.Chat.Server/articles/usermanagement.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat Server</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

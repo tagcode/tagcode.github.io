@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Running | Uniform LiveKit Authorization Server </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Running | Uniform LiveKit Authorization Server ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Uniform LiveKit Authorization Server">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/running.html" title="Guide">Guide</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="active">
+                      <a href="running.html" title="Running" class="active">Running</a>
+                    </li>
+                    <li class="">
+                      <a href="settings.html" title="Settings" class="">Settings</a>
+                    </li>
+                    <li class="">
+                      <a href="homeservers.html" title="Homeservers" class="">Homeservers</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.LiveKit.Server.Running.Article">
+<h1 id="running">Running</h1>
+
+<p>The service needs a LiveKit server with an API key, see <a href="https://docs.livekit.io/home/self-hosting/local/">LiveKit's self-hosting guide</a>. Turn off LiveKit's <code>room: auto_create</code>, so that only users of full-access homeservers can start calls; the service creates their rooms.</p>
+<h2 id="install">Install</h2>
+<p>Unpack the release anywhere. On Debian and Ubuntu, the releases are also an apt repository, for x64 and arm64: add it once, with its signing key, then install the service, which <code>sudo apt upgrade</code> keeps up to date. The command is then <code>uniform-livekit-server</code> in place of <code>./uniform-livekit-server</code> below.</p>
+<pre><code class="lang-bash">sudo install -d -m 0755 /etc/apt/keyrings
+curl -fsSL https://github.com/tagcode/Uniform.Chat/releases/latest/download/uniform-chat-archive-keyring.gpg | sudo tee /etc/apt/keyrings/uniform-chat.gpg &gt; /dev/null
+echo &quot;deb [signed-by=/etc/apt/keyrings/uniform-chat.gpg] https://github.com/tagcode/Uniform.Chat/releases/ latest/download/&quot; | sudo tee /etc/apt/sources.list.d/uniform-chat.list
+sudo apt update
+</code></pre>
+<pre><code class="lang-bash">sudo apt install uniform-livekit-server
+</code></pre>
+<h2 id="first-start">First start</h2>
+<p>Give the service LiveKit's address, its API key and secret, and your homeserver. Put the secret in the settings file or an environment variable, not on the command line, where other users of the computer can see it:</p>
+<pre><code class="lang-bash">export LiveKit__ApiSecret='a-long-random-secret-of-at-least-32-characters'
+./uniform-livekit-server --LiveKit:Url=wss://livekit.example.org --LiveKit:ApiKey=homeserver --LiveKit:FullAccessHomeservers=example.org
+</code></pre>
+<p>It listens on port 8080. When a setting is missing, the service prints which one and stops.</p>
+<p>Apps reach it over HTTPS, so put a reverse proxy with a certificate in front of it. The usual path is <code>/livekit/jwt</code> of the homeserver's domain. With Caddy, for example:</p>
+<pre><code class="lang-text">example.org {
+    handle_path /livekit/jwt/* {
+        reverse_proxy localhost:8080
+    }
+}
+</code></pre>
+<p><code>https://example.org/livekit/jwt/healthz</code> then answers with status 200.</p>
+<p>Settings come from, later ones overriding earlier ones:</p>
+<ol>
+<li><code>appsettings.json</code> next to the program</li>
+<li><code>~/.config/uniform-livekit-server/settings.json</code></li>
+<li>lk-jwt-service's variables, such as <code>LIVEKIT_SECRET</code></li>
+<li>Environment variables, with <code>__</code> between parts: <code>LiveKit__ApiSecret</code></li>
+<li>The command line: <code>--LiveKit:Url=wss://livekit.example.org</code></li>
+</ol>
+<p>Its log files are in <code>~/.local/share/uniform-livekit-server/logs</code>, one per start.</p>
+<h2 id="as-a-system-service">As a system service</h2>
+<p>Unpack it in <code>/opt/uniform-livekit-server</code>, create a user for it, and write the settings, with the secret, to <code>/etc/uniform-livekit-server/settings.json</code>:</p>
+<pre><code class="lang-bash">sudo useradd --system --home-dir /var/lib/uniform-livekit-server --shell /usr/sbin/nologin uniform-livekit-server
+sudo mkdir -p /opt/uniform-livekit-server /etc/uniform-livekit-server
+sudo tar -xzf uniform-chat-livekit-&lt;version&gt;-linux-x64.tar.gz -C /opt/uniform-livekit-server --strip-components=1
+sudo nano /etc/uniform-livekit-server/settings.json
+sudo chown -R uniform-livekit-server:uniform-livekit-server /etc/uniform-livekit-server
+sudo chmod 600 /etc/uniform-livekit-server/settings.json
+</code></pre>
+<pre><code class="lang-json">{
+  &quot;LiveKit&quot;: {
+    &quot;Url&quot;: &quot;wss://livekit.example.org&quot;,
+    &quot;ApiKey&quot;: &quot;homeserver&quot;,
+    &quot;ApiSecret&quot;: &quot;a-long-random-secret-of-at-least-32-characters&quot;,
+    &quot;FullAccessHomeservers&quot;: &quot;example.org&quot;
+  }
+}
+</code></pre>
+<p>Then the unit file <code>/etc/systemd/system/uniform-livekit-server.service</code>:</p>
+<pre><code class="lang-ini">[Unit]
+Description=Uniform MatrixRTC authorization server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=uniform-livekit-server
+Group=uniform-livekit-server
+ExecStart=/opt/uniform-livekit-server/uniform-livekit-server
+Environment=XDG_CONFIG_HOME=/etc
+Environment=XDG_DATA_HOME=/var/lib
+StateDirectory=uniform-livekit-server
+Restart=on-failure
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/uniform-livekit-server
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<pre><code class="lang-bash">sudo systemctl daemon-reload
+sudo systemctl enable --now uniform-livekit-server
+journalctl -u uniform-livekit-server -f
+</code></pre>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.LiveKit.Server/articles/running.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform LiveKit Authorization Server</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

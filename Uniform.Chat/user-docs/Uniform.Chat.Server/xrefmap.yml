@@ -1,0 +1,42 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Uniform.Chat.Server.Article
+  name: Server
+  href: index.html
+- uid: Uniform.Chat.Server.Clients.Article
+  name: Connecting clients
+  href: articles/clients.html
+- uid: Uniform.Chat.Server.Dashboard.Article
+  name: Run with the dashboard
+  href: articles/dashboard.html
+- uid: Uniform.Chat.Server.Files.Article
+  name: Files
+  href: articles/files.html
+- uid: Uniform.Chat.Server.Install.Article
+  name: Installing
+  href: articles/install.html
+- uid: Uniform.Chat.Server.LiveKit.Article
+  name: Video calls in Element X
+  href: articles/livekit.html
+- uid: Uniform.Chat.Server.RemoteAdmin.Article
+  name: Remote administration
+  href: articles/remote-admin.html
+- uid: Uniform.Chat.Server.Service.Article
+  name: Run without the dashboard
+  href: articles/service.html
+- uid: Uniform.Chat.Server.Settings.Article
+  name: Settings
+  href: articles/settings.html
+- uid: Uniform.Chat.Server.Troubleshooting.Article
+  name: Troubleshooting
+  href: articles/troubleshooting.html
+- uid: Uniform.Chat.Server.Turn.Article
+  name: Calls through firewalls
+  href: articles/turn.html
+- uid: Uniform.Chat.Server.Updating.Article
+  name: Updating
+  href: articles/updating.html
+- uid: Uniform.Chat.Server.UserManagement.Article
+  name: User Management
+  href: articles/usermanagement.html

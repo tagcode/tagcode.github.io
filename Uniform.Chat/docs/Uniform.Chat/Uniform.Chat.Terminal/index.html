@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Uniform.Chat.Terminal | Uniform Chat Developer Guide </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Uniform.Chat.Terminal | Uniform Chat Developer Guide ">
+    
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.json">
+      <meta property="docfx:tocrel" content="../toc.json">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="Uniform Chat">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../../Uniform.Chat/index.html" title="Uniform.Matrix">Uniform.Matrix</a>
+                      </li>
+                      <li>
+                          <a href="../../api/LiveKit.Proto.html" title="API">API</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Protocol.Core</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Core/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Protocol.Client</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Client/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Client/log-in.html" title="Log in" class="">Log in</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Client/receive-events.html" title="Receive events" class="">Receive events</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Client/rooms-and-messages.html" title="Rooms and messages" class="">Rooms and messages</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Client/directories-and-account-data.html" title="Directories and account data" class="">Directories and account data</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Client/files-and-devices.html" title="Files and devices" class="">Files and devices</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Client/errors.html" title="Errors" class="">Errors</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Protocol.Crypto</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Crypto/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Hosting</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Hosting/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Gui.Terminal</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Gui.Terminal/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Audio</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Audio/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Video</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Video/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Stun.Protocol</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Stun.Protocol/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Stun</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Stun/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.LiveKit.Protocol</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.LiveKit.Protocol/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.LiveKit</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.LiveKit/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.WebRtc</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.WebRtc/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Client</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Client/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Client/room-state.html" title="Room state" class="">Room state</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Client/rich-text.html" title="Rich text" class="">Rich text</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Client/local-storage.html" title="Local storage" class="">Local storage</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Client/outbox.html" title="Outbox" class="">Outbox</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Client/track-rooms.html" title="Track rooms" class="">Track rooms</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Calls</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Calls/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Chat.Terminal</a>
+
+                        <ul class="nav level2">
+                          <li class="active">
+                            <a href="../Uniform.Chat.Terminal/index.html" title="Introduction" class="active">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Chat.Avalonia</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Chat.Avalonia/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Chat.Avalonia/view-models.html" title="View models" class="">View models</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Chat.Avalonia/views.html" title="Views" class="">Views</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Chat.Desktop</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Chat.Desktop/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Chat.Android</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Chat.Android/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Protocol.Server</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Server/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Server</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/requests.html" title="Requests" class="">Requests</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/storage.html" title="Storage" class="">Storage</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/events-and-state.html" title="Events and state" class="">Events and state</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/sync.html" title="Sync and the stream" class="">Sync and the stream</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/services.html" title="Services" class="">Services</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/push.html" title="Push rules and pushers" class="">Push rules and pushers</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/presence.html" title="Presence" class="">Presence</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/url-previews.html" title="URL previews" class="">URL previews</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/rate-limits.html" title="Rate limits" class="">Rate limits</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/federation.html" title="Federation" class="">Federation</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/testing.html" title="Testing" class="">Testing</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Chat.Server</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Chat.Server/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Turn</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Turn/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Stun.Hosting</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Stun.Hosting/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Stun.Server</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Stun.Server/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.LiveKit.Authorization</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.LiveKit.Authorization/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.LiveKit.Hosting</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.LiveKit.Hosting/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.LiveKit.Server</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.LiveKit.Server/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <a href="../building.html" title="Building" class="">Building</a>
+                    </li>
+                    <li class="">
+                      <a href="../testing.html" title="Testing" class="">Testing</a>
+                    </li>
+                    <li class="">
+                      <a href="../documentation.html" title="Documentation" class="">Documentation</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Chat.Terminal.Article">
+<h1 id="uniformchatterminal">Uniform.Chat.Terminal</h1>
+
+<p>The terminal app: <a class="xref" href="../../api/Uniform.Chat.Desktop.Program.html"><code>Program</code></a> calls <a class="xref" href="../../api/Uniform.Matrix.Hosting.HostingExtensions.html#Uniform_Matrix_Hosting_HostingExtensions_AddSettings_"><code>AddSettings</code></a>, <a class="xref" href="../../api/Uniform.Matrix.Client.ClientServiceExtensions.html#Uniform_Matrix_Client_ClientServiceExtensions_AddMatrixClient_"><code>AddMatrixClient</code></a> and registers its <a class="xref" href="../../api/Uniform.Chat.Terminal.Configuration.UiOptions.html"><code>UiOptions</code></a>, then runs the UI.</p>
+<p>The program file is <code>Uniform.Chat</code> (<code>Uniform.Chat.exe</code> on Windows), like the desktop app's. <code>Program</code> sets the host's application name to <code>Uniform.Chat.Terminal</code>, because the settings, data and log folders are named after it, not after the program file.</p>
+<h2 id="user-interface">User interface</h2>
+<p><a class="xref" href="../../api/Uniform.Chat.Desktop.Program.html"><code>Program</code></a> creates the Terminal.Gui application first, starts the host's background services and then runs <a class="xref" href="../../api/Uniform.Chat.Terminal.Ui.MainWindow.html"><code>MainWindow</code></a> on the main thread until the user quits. Background work never touches views directly: sync changes, outbox changes and connection status are marshalled with <code>IApplication.Invoke</code>, and the password prompt shows its dialog the same way.</p>
+<ul>
+<li><a class="xref" href="../../api/Uniform.Chat.Terminal.Ui.MainWindow.html"><code>MainWindow</code></a> lays out the menu bar, room list, <a class="xref" href="../../api/Uniform.Chat.Terminal.Ui.TimelinePane.html"><code>TimelinePane</code></a>, member list, input line and status bar, and handles menu actions, <code>/commands</code> and keys. Shortcuts are handled application-wide in one key handler; menu items only show them.</li>
+<li><a class="xref" href="../../api/Uniform.Chat.Terminal.Ui.TimelinePane.html"><code>TimelinePane</code></a> is a <code>ListView</code> of wrapped lines. It rewraps on resize, colors lines by <a class="xref" href="../../api/Uniform.Chat.Terminal.Ui.EntryKind.html"><code>EntryKind</code></a>, inserts day separators, keeps pending outbox messages last and follows new lines while scrolled to the bottom.</li>
+<li><code>MainWindow.Messages.cs</code> holds message actions (reply, react, edit, delete, save), compose modes, typing notifications, nick completion, file sending and the devices dialog. Replies, edits and reactions go through the outbox like messages; uploads and redactions are sent directly.</li>
+<li><code>MainWindow.Images.cs</code> shows image previews. An entry with an <code>ImageUri</code> asks <a class="xref" href="../../api/Uniform.Chat.Terminal.Ui.TimelinePane.html#Uniform_Chat_Terminal_Ui_TimelinePane_PreviewProvider"><code>TimelinePane.PreviewProvider</code></a> for lines on every rebuild; the first request starts a background load of an 800×600 thumbnail through <a class="xref" href="../../api/Uniform.Matrix.Client.Services.MediaCache.html"><code>MediaCache</code></a> (falling back to the full image), decodes it with StbImageSharp into <a class="xref" href="../../api/Uniform.Chat.Terminal.Ui.Images.DecodedImage.html"><code>DecodedImage</code></a>, then refreshes the pane. <a class="xref" href="../../api/Uniform.Chat.Terminal.Ui.Images.AsciiArt.html#Uniform_Chat_Terminal_Ui_Images_AsciiArt_Render_"><code>AsciiArt.Render</code></a> samples a brightness grid (one value per cell, or 2×4 per cell for Braille), stretches its contrast, then maps it to shade blocks <code> ░▒▓█</code> with Floyd–Steinberg dithering between the five levels, to the 70-step ASCII ramp, or to dithered Braille dots. It corrects for cells being about twice as tall as wide. Previews fill the pane unless limited in settings and are cached per image and size; the pane rebuilds on height changes while it shows images. The viewer feeds a downscaled image to Terminal.Gui's <code>ImageView</code>, which uses Kitty or Sixel graphics when available.</li>
+<li><a class="xref" href="../../api/Uniform.Chat.Terminal.Ui.MessageFormatter.html"><code>MessageFormatter</code></a> and <a class="xref" href="../../api/Uniform.Matrix.Gui.Terminal.TextWrapper.html"><code>TextWrapper</code></a> are pure functions and unit-tested. Wrapping counts terminal columns, so emoji and CJK take two.</li>
+<li>A dialog opened from another dialog's result is queued with <code>IApplication.Invoke</code>; opening it directly lets the key that closed the first dialog reach the second.</li>
+<li>Terminal.Gui 2.5 does not report F3 when the terminal sends <code>ESC O R</code> (most xterm-style terminals do), so message selection is on Ctrl+Up.</li>
+<li>Reading <a class="xref" href="../../api/Uniform.Matrix.Client.State.Room.html"><code>Room</code></a> state for display goes through <a class="xref" href="../../api/Uniform.Matrix.Client.Services.SyncProcessor.html#Uniform_Matrix_Client_Services_SyncProcessor_Read_"><code>SyncProcessor.Read</code></a>, as <a class="xref" href="../../api/Uniform.Matrix.Client.State.RoomStore.html"><code>RoomStore</code></a> is not thread-safe. History and member loading fetch from the server outside the lock and apply inside it.</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/docs/Uniform.Chat/Uniform.Chat.Terminal/index.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

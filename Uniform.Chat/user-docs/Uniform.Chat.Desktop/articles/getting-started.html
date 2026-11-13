@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Getting started | Uniform Chat </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Getting started | Uniform Chat ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Uniform Chat">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/install.html" title="Guide">Guide</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="install.html" title="Installing" class="">Installing</a>
+                    </li>
+                    <li class="active">
+                      <a href="getting-started.html" title="Getting started" class="active">Getting started</a>
+                    </li>
+                    <li class="">
+                      <a href="rooms.html" title="Rooms" class="">Rooms</a>
+                    </li>
+                    <li class="">
+                      <a href="messages.html" title="Messages and files" class="">Messages and files</a>
+                    </li>
+                    <li class="">
+                      <a href="calls.html" title="Voice and video calls" class="">Voice and video calls</a>
+                    </li>
+                    <li class="">
+                      <a href="security.html" title="Security" class="">Security</a>
+                    </li>
+                    <li class="">
+                      <a href="notifications.html" title="Notifications" class="">Notifications</a>
+                    </li>
+                    <li class="">
+                      <a href="settings.html" title="Settings" class="">Settings</a>
+                    </li>
+                    <li class="">
+                      <a href="administration.html" title="Server administration" class="">Server administration</a>
+                    </li>
+                    <li class="">
+                      <a href="phones.html" title="Phones and narrow windows" class="">Phones and narrow windows</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Chat.Desktop.GettingStarted.Article">
+<h1 id="getting-started">Getting started</h1>
+
+<p>The Uniform Chat app for Windows and Linux: rooms, messages, files and end-to-end encryption in a graphical window. In narrow windows it shows one pane at a time.</p>
+<p><img src="../images/desktop.png" alt="The desktop app with a room open"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The app is in early development. It covers everyday chatting and encryption; notifications on Windows are still to come.</p>
+</div>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Windows 10 or later, or Linux</li>
+<li>An account on a Matrix homeserver, for example <code>@alice:matrix.org</code></li>
+</ul>
+<h2 id="install">Install</h2>
+<p>See <a class="xref" href="install.html">Installing</a>: with apt on Debian and Ubuntu, from the release archives on Windows and other Linux systems, or from source.</p>
+<h2 id="sign-in">Sign in</h2>
+<p>Enter your full user ID, such as <code>@alice:matrix.org</code>, and your password. The server is found from the user ID; give its address only when it has no discovery file, for example <code>http://localhost:8008</code> for a server on your own computer.</p>
+<p>The app remembers the account, so the next start opens the chat without asking. <em>⋮ → Sign out</em> logs the device out on the server and forgets the account.</p>
+<h2 id="create-an-account">Create an account</h2>
+<p>On the sign-in form, choose <em>Create an account</em>. Enter the user ID you want, such as <code>@alice:example.org</code>, where the part after <code>:</code> is the server, and a password of your own. Many servers do not let apps create accounts: then make the account on the server's website and sign in here.</p>
+<p>When the server needs more, the form asks for it on the first try:</p>
+<ul>
+<li>a <strong>registration token</strong>, which the server's admin gives to the people they invite;</li>
+<li>its <strong>policies</strong>, such as terms of service: open them from their links, then tick <em>I have read and accept these policies</em>.</li>
+</ul>
+<p>The app then creates the account and signs in to it.</p>
+<h2 id="delete-the-account">Delete the account</h2>
+<p><em>⋮ → Security and recovery…</em>, then <em>Delete account…</em> at the end. Confirm with your password. You leave every room, your name and picture are removed, and every device is signed out. The account cannot be used again, and nobody can take its user ID.</p>
+<p>Next, see <a class="xref" href="rooms.html">Rooms</a> and <a class="xref" href="messages.html">Messages and files</a>.</p>
+<h2 id="where-things-are-kept">Where things are kept</h2>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Messages, keys and files</td>
+<td><code>~/.local/share/uniform-chat-desktop/</code></td>
+</tr>
+<tr>
+<td>Remembered account and settings</td>
+<td><code>~/.config/uniform-chat-desktop/settings.json</code></td>
+</tr>
+</tbody>
+</table>
+<p>On Windows, <code>~</code> is your user folder, for example <code>C:\Users\alice</code>.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.Chat.Desktop/articles/getting-started.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

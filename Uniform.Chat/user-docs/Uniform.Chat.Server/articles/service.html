@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Run without the dashboard | Uniform Chat Server </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Run without the dashboard | Uniform Chat Server ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Uniform Chat Server">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/install.html" title="Guide">Guide</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="install.html" title="Installing" class="">Installing</a>
+                    </li>
+                    <li class="">
+                      <a href="dashboard.html" title="Run with the dashboard" class="">Run with the dashboard</a>
+                    </li>
+                    <li class="active">
+                      <a href="service.html" title="Run without the dashboard" class="active">Run without the dashboard</a>
+                    </li>
+                    <li class="">
+                      <a href="settings.html" title="Settings" class="">Settings</a>
+                    </li>
+                    <li class="">
+                      <a href="usermanagement.html" title="User Management" class="">User Management</a>
+                    </li>
+                    <li class="">
+                      <a href="remote-admin.html" title="Remote administration" class="">Remote administration</a>
+                    </li>
+                    <li class="">
+                      <a href="turn.html" title="Calls through firewalls" class="">Calls through firewalls</a>
+                    </li>
+                    <li class="">
+                      <a href="livekit.html" title="Video calls in Element X" class="">Video calls in Element X</a>
+                    </li>
+                    <li class="">
+                      <a href="clients.html" title="Connecting clients" class="">Connecting clients</a>
+                    </li>
+                    <li class="">
+                      <a href="files.html" title="Files" class="">Files</a>
+                    </li>
+                    <li class="">
+                      <a href="updating.html" title="Updating" class="">Updating</a>
+                    </li>
+                    <li class="">
+                      <a href="troubleshooting.html" title="Troubleshooting" class="">Troubleshooting</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Chat.Server.Service.Article">
+<h1 id="run-without-the-dashboard">Run without the dashboard</h1>
+
+<p>Without a terminal, for example as a service, the server runs without the dashboard and also writes its log to standard output:</p>
+<pre><code class="lang-bash">./uniform-chat-server --Host:Ui=None
+</code></pre>
+<p><code>Host:Ui</code> chooses the mode:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Auto</code> (default)</td>
+<td>The dashboard when input and output are a terminal; none when either is redirected, as under systemd or with <code>&gt; server.log</code></td>
+</tr>
+<tr>
+<td><code>Dashboard</code></td>
+<td>Dashboard for monitoring server status and for perusing logs.</td>
+</tr>
+<tr>
+<td><code>None</code></td>
+<td>No dashboard.</td>
+</tr>
+</tbody>
+</table>
+<p>Stop the server with Ctrl+C, or with <code>SIGTERM</code> from a service manager. It stops within a few seconds: clients waiting for new messages get their answer at once, and the database is written out before the program ends. The log shows <em>Stopping…</em> and <em>Stopped</em>.</p>
+<h2 id="as-a-user-service">As a user service</h2>
+<p>To run the server as your own user, put the program in a folder of its own, e.g. <code>~/uniform-chat-server</code>, then run it from a user unit. Its settings are in <code>~/.config/uniform-chat-server</code> and its data in <code>~/.local/share/uniform-chat-server</code>.</p>
+<p>Unpack the downloaded release there:</p>
+<pre><code class="lang-bash">mkdir -p ~/uniform-chat-server
+tar -xzf uniform-chat-server-&lt;version&gt;-linux-x64.tar.gz -C ~/uniform-chat-server --strip-components=1
+</code></pre>
+<p>Or, from the source, publish it there:</p>
+<pre><code class="lang-bash">dotnet publish src/Uniform.Chat.Server -c Release -o ~/uniform-chat-server
+</code></pre>
+<p>Then write the unit file:</p>
+<pre><code class="lang-ini"># ~/.config/systemd/user/uniform-chat-server.service
+[Unit]
+Description=Uniform Chat homeserver
+
+[Service]
+ExecStart=%h/uniform-chat-server/uniform-chat-server
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+</code></pre>
+<pre><code class="lang-bash">systemctl --user enable --now uniform-chat-server
+journalctl --user -u uniform-chat-server -f
+</code></pre>
+<p>systemd connects the server's input to <code>/dev/null</code> and its output to the journal, so <code>Auto</code> runs without the dashboard there and the log goes to the journal. A user service stops when you log out, unless lingering is on: <code>sudo loginctl enable-linger $USER</code>.</p>
+<h2 id="from-the-apt-package">From the apt package</h2>
+<p>The <code>uniform-chat-server</code> package, see <a class="xref" href="install.html">Installing</a>, sets up the system service for you:</p>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Program</td>
+<td><code>/opt/uniform-chat/server/uniform-chat-server</code>, also as the command <code>uniform-chat-server</code></td>
+</tr>
+<tr>
+<td>Service</td>
+<td><code>uniform-chat-server</code>, run by the system user <code>uniform-chat</code>, which the package creates</td>
+</tr>
+<tr>
+<td>Settings</td>
+<td><code>/etc/uniform-chat-server/settings.json</code></td>
+</tr>
+<tr>
+<td>Data: database, signing key and files</td>
+<td><code>/var/lib/uniform-chat-server</code></td>
+</tr>
+<tr>
+<td>Logs: one file per start, the newest 20 kept; also in the journal, <code>journalctl -u uniform-chat-server</code></td>
+<td><code>/var/log/uniform-chat-server</code></td>
+</tr>
+</tbody>
+</table>
+<p>The service is off after installing, as the server needs its name and address first. Write the settings, readable only by the service, as they may hold secrets, then start it and have it start at boot:</p>
+<pre><code class="lang-bash">sudo nano /etc/uniform-chat-server/settings.json
+sudo chown uniform-chat:uniform-chat /etc/uniform-chat-server/settings.json
+sudo chmod 600 /etc/uniform-chat-server/settings.json
+sudo systemctl enable --now uniform-chat-server
+</code></pre>
+<p>Step 3 below has a short example of the settings, and <a class="xref" href="install.html">Installing</a> a complete one. The service may listen on ports below 1024, such as 443. It cannot see the home folders, so keep certificates elsewhere; the note at the end of this page tells how to give it certbot's certificates. Control it and read its log as in the table below. <code>sudo apt upgrade</code> restarts a running service with the new version.</p>
+<p>To change the service, e.g. to add environment variables, use <code>sudo systemctl edit uniform-chat-server</code>, which keeps your changes over updates. <code>sudo apt remove uniform-chat-server</code> stops and removes the service and the program, but keeps the settings, the data and the user.</p>
+<p>To manage the running service, open the dashboard on it; the service keeps serving meanwhile:</p>
+<pre><code class="lang-bash">sudo uniform-chat-server manage
+</code></pre>
+<p>The manager connects through the service's admin socket, <code>/run/uniform-chat-server/admin.sock</code>, which only root and the <code>uniform-chat</code> group may open, and needs no account. It has the users, rooms and reports windows, the service's logs, and its settings. The settings work as in the dashboard, through the service itself: <strong>Apply</strong> changes the running service at once, and <strong>Save</strong> has the service write its settings file. Options marked ↻ take effect when the service starts again: <code>sudo systemctl restart uniform-chat-server</code>. Secrets, such as registration tokens, show as hidden and are changed only in the file. Ctrl+Q closes the manager, not the server. See <a class="xref" href="remote-admin.html">Remote administration</a> to manage a server on another machine.</p>
+<p>The dashboard of the server itself still runs when the service is stopped. Only one server runs on a data folder at a time: while the service still runs or is stopping, it exits at once with <em>Another server (pid N) is using /var/lib/uniform-chat-server; stop it first.</em></p>
+<pre><code class="lang-bash">sudo systemctl stop uniform-chat-server
+sudo -u uniform-chat XDG_CONFIG_HOME=/etc XDG_DATA_HOME=/var/lib uniform-chat-server --Host:Ui=Dashboard
+sudo systemctl start uniform-chat-server
+</code></pre>
+<p>If you set up the service by hand before, with the steps below, remove your unit file <code>/etc/systemd/system/uniform-chat-server.service</code>, which would otherwise be used in place of the package's, and give the settings to the new user; the service hands the data folder over itself at its next start:</p>
+<pre><code class="lang-bash">sudo rm /etc/systemd/system/uniform-chat-server.service
+sudo chown -R uniform-chat:uniform-chat /etc/uniform-chat-server
+sudo systemctl daemon-reload
+sudo systemctl restart uniform-chat-server
+</code></pre>
+<h2 id="as-a-system-service-ubuntu">As a system service (Ubuntu)</h2>
+<p>Without the package, set the service up by hand.</p>
+<p>On a server, run it as a system service named <code>uniform-chat-server</code>: it starts at boot, runs as a user of its own, and is controlled with <code>sudo systemctl</code>. The steps below put the program in <code>/opt/uniform-chat-server</code>, the settings in <code>/etc/uniform-chat-server</code>, and the data in <code>/var/lib/uniform-chat-server</code>.</p>
+<ol>
+<li><p>Create a system user for the server, with no login:</p>
+<pre><code class="lang-bash">sudo useradd --system --home-dir /var/lib/uniform-chat-server --shell /usr/sbin/nologin uniform-chat-server
+</code></pre>
+</li>
+<li><p>Unpack the downloaded release in <code>/opt/uniform-chat-server</code>; or, from the source, publish it there:</p>
+<pre><code class="lang-bash">sudo mkdir -p /opt/uniform-chat-server
+sudo tar -xzf uniform-chat-server-&lt;version&gt;-linux-x64.tar.gz -C /opt/uniform-chat-server --strip-components=1
+</code></pre>
+<pre><code class="lang-bash">sudo dotnet publish src/Uniform.Chat.Server -c Release -o /opt/uniform-chat-server
+</code></pre>
+</li>
+<li><p>Write the settings to <code>/etc/uniform-chat-server/settings.json</code>, readable only by the server, as it may hold secrets such as the TURN secret. For example, behind nginx on the same machine:</p>
+<pre><code class="lang-bash">sudo mkdir -p /etc/uniform-chat-server
+sudo nano /etc/uniform-chat-server/settings.json
+sudo chown -R uniform-chat-server:uniform-chat-server /etc/uniform-chat-server
+sudo chmod 600 /etc/uniform-chat-server/settings.json
+</code></pre>
+<pre><code class="lang-json">{
+  &quot;Urls&quot;: &quot;http://127.0.0.1:8008&quot;,
+  &quot;Server&quot;: {
+    &quot;ServerName&quot;: &quot;example.org&quot;,
+    &quot;PublicBaseUrl&quot;: &quot;https://example.org&quot;,
+    &quot;TrustedProxies&quot;: &quot;127.0.0.1&quot;,
+    &quot;Registration&quot;: &quot;Token&quot;,
+    &quot;RegistrationTokens&quot;: &quot;a-long-random-token&quot;
+  }
+}
+</code></pre>
+<p><a class="xref" href="install.html">Installing</a> has a complete example with federation and calls, and the nginx site in front; <a class="xref" href="settings.html">Settings</a> lists every option.</p>
+</li>
+<li><p>Write the unit file <code>/etc/systemd/system/uniform-chat-server.service</code>:</p>
+<pre><code class="lang-ini">[Unit]
+Description=Uniform Chat homeserver
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=uniform-chat-server
+Group=uniform-chat-server
+ExecStart=/opt/uniform-chat-server/uniform-chat-server --Host:Ui=None
+WorkingDirectory=/var/lib/uniform-chat-server
+# Settings from /etc/uniform-chat-server, data in /var/lib/uniform-chat-server
+Environment=XDG_CONFIG_HOME=/etc
+Environment=XDG_DATA_HOME=/var/lib
+StateDirectory=uniform-chat-server
+StateDirectoryMode=0700
+Restart=on-failure
+RestartSec=5
+# Stop gracefully: SIGTERM, then wait for the database to close
+TimeoutStopSec=30
+# Hardening: no new privileges, read-only system, private /tmp
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/uniform-chat-server /etc/uniform-chat-server
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>The server adds its own name to <code>XDG_CONFIG_HOME</code> and <code>XDG_DATA_HOME</code>, which gives the two folders above. <code>/etc/uniform-chat-server</code> is writable so that the settings window, if you ever run the dashboard as this user, can save there; take it out of <code>ReadWritePaths</code> to keep the settings read-only.</p>
+</li>
+<li><p>Start it, and have it start at boot:</p>
+<pre><code class="lang-bash">sudo systemctl daemon-reload
+sudo systemctl enable --now uniform-chat-server
+</code></pre>
+</li>
+</ol>
+<p>Then control it with <code>systemctl</code>, and read its log from the journal:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo systemctl status uniform-chat-server</code></td>
+<td>Show whether it runs, and the latest log lines</td>
+</tr>
+<tr>
+<td><code>sudo systemctl stop uniform-chat-server</code></td>
+<td>Stop it</td>
+</tr>
+<tr>
+<td><code>sudo systemctl start uniform-chat-server</code></td>
+<td>Start it</td>
+</tr>
+<tr>
+<td><code>sudo systemctl restart uniform-chat-server</code></td>
+<td>Restart it, e.g. after changing the settings</td>
+</tr>
+<tr>
+<td><code>sudo systemctl disable uniform-chat-server</code></td>
+<td>Not start it at boot any more</td>
+</tr>
+<tr>
+<td><code>journalctl -u uniform-chat-server -f</code></td>
+<td>Follow the log</td>
+</tr>
+<tr>
+<td><code>journalctl -u uniform-chat-server --since today</code></td>
+<td>Today's log</td>
+</tr>
+</tbody>
+</table>
+<p>The server also keeps its own log files in <code>/var/lib/uniform-chat-server/logs</code>, with its database and signing key; see <a class="xref" href="files.html">Files</a>. To update the server, see <a class="xref" href="updating.html">Updating</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>To serve HTTPS itself, without a proxy, the server needs to read the certificate and to listen on port 443:</p>
+<ul>
+<li><p>Ports below 1024 need <code>AmbientCapabilities=CAP_NET_BIND_SERVICE</code> in the <code>[Service]</code> section, which the package's service has; or listen on 8448 instead.</p>
+</li>
+<li><p>certbot keeps its files readable only by root. Copy them where the server can read them in a deploy hook, e.g. <code>/etc/letsencrypt/renewal-hooks/deploy/uniform-chat-server.sh</code>; with the package, the user is <code>uniform-chat</code>:</p>
+<pre><code class="lang-bash">#!/bin/sh
+install -o uniform-chat-server -g uniform-chat-server -m 600 &quot;$RENEWED_LINEAGE/fullchain.pem&quot; &quot;$RENEWED_LINEAGE/privkey.pem&quot; /etc/uniform-chat-server/tls/
+</code></pre>
+<p>and point <code>Tls:CertificatePath</code> and <code>Tls:KeyPath</code> at <code>/etc/uniform-chat-server/tls/</code>. The server picks up renewed files without a restart.</p>
+</li>
+</ul>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.Chat.Server/articles/service.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat Server</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

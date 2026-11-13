@@ -1,0 +1,42 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Uniform.Chat.Android.Administration.Article
+  name: Server administration
+  href: articles/administration.html
+- uid: Uniform.Chat.Android.Article
+  name: Android Client
+  href: index.html
+- uid: Uniform.Chat.Android.Calls.Article
+  name: Voice and video calls
+  href: articles/calls.html
+- uid: Uniform.Chat.Android.GettingStarted.Article
+  name: Getting started
+  href: articles/getting-started.html
+- uid: Uniform.Chat.Android.Install.Article
+  name: Installing
+  href: articles/install.html
+- uid: Uniform.Chat.Android.Messages.Article
+  name: Messages and files
+  href: articles/messages.html
+- uid: Uniform.Chat.Android.Notifications.Article
+  name: Notifications
+  href: articles/notifications.html
+- uid: Uniform.Chat.Android.Phones.Article
+  name: Phones and narrow windows
+  href: articles/phones.html
+- uid: Uniform.Chat.Android.PrivacyPolicy.Article
+  name: Privacy policy
+  href: privacy-policy.html
+- uid: Uniform.Chat.Android.Rooms.Article
+  name: Rooms
+  href: articles/rooms.html
+- uid: Uniform.Chat.Android.Security.Article
+  name: Security
+  href: articles/security.html
+- uid: Uniform.Chat.Android.Settings.Article
+  name: Settings
+  href: articles/settings.html
+- uid: Uniform.Chat.Android.UserPolicy.Article
+  name: User policy
+  href: user-policy.html

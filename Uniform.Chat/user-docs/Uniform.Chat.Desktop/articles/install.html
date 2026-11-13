@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Installing | Uniform Chat </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Installing | Uniform Chat ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Uniform Chat">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/install.html" title="Guide">Guide</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="active">
+                      <a href="install.html" title="Installing" class="active">Installing</a>
+                    </li>
+                    <li class="">
+                      <a href="getting-started.html" title="Getting started" class="">Getting started</a>
+                    </li>
+                    <li class="">
+                      <a href="rooms.html" title="Rooms" class="">Rooms</a>
+                    </li>
+                    <li class="">
+                      <a href="messages.html" title="Messages and files" class="">Messages and files</a>
+                    </li>
+                    <li class="">
+                      <a href="calls.html" title="Voice and video calls" class="">Voice and video calls</a>
+                    </li>
+                    <li class="">
+                      <a href="security.html" title="Security" class="">Security</a>
+                    </li>
+                    <li class="">
+                      <a href="notifications.html" title="Notifications" class="">Notifications</a>
+                    </li>
+                    <li class="">
+                      <a href="settings.html" title="Settings" class="">Settings</a>
+                    </li>
+                    <li class="">
+                      <a href="administration.html" title="Server administration" class="">Server administration</a>
+                    </li>
+                    <li class="">
+                      <a href="phones.html" title="Phones and narrow windows" class="">Phones and narrow windows</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Chat.Desktop.Install.Article">
+<h1 id="installing">Installing</h1>
+
+<p>The app runs on Windows 10 or later and on Linux, on x64 and arm64 processors. It brings everything it needs; no .NET or other runtime has to be installed.</p>
+<h2 id="apt-install">Apt install</h2>
+<p>On Debian and Ubuntu, x64 and arm64, install from the apt repository of Uniform Chat, which is kept in its releases on GitHub. Add the repository once, with the key its packages are signed with:</p>
+<pre><code class="lang-bash">sudo install -d -m 0755 /etc/apt/keyrings
+curl -fsSL https://github.com/tagcode/Uniform.Chat/releases/latest/download/uniform-chat-archive-keyring.gpg | sudo tee /etc/apt/keyrings/uniform-chat.gpg &gt; /dev/null
+echo &quot;deb [signed-by=/etc/apt/keyrings/uniform-chat.gpg] https://github.com/tagcode/Uniform.Chat/releases/ latest/download/&quot; | sudo tee /etc/apt/sources.list.d/uniform-chat.list
+sudo apt update
+</code></pre>
+<p>Then install the app, which also adds it to the application menu:</p>
+<pre><code class="lang-bash">sudo apt install uniform-chat
+</code></pre>
+<p>Start it from the menu, or with the command <code>uniform-chat</code>. <code>sudo apt upgrade</code> updates it with the rest of the system. <code>sudo apt remove uniform-chat</code> removes it, but not your account and messages in <code>~/.local/share/uniform-chat-desktop</code>.</p>
+<h2 id="windows">Windows</h2>
+<p>Download <code>uniform-chat-desktop-&lt;version&gt;-win-x64.zip</code> (or <code>win-arm64</code>) from the <a href="https://github.com/tagcode/Uniform.Chat/releases">releases</a> and unpack it anywhere; the <code>docs</code> folder in it has this guide (open <code>docs/index.html</code>). Then run <code>Uniform.Chat.exe</code>. Windows may warn that the app is from an unknown publisher, because it is not signed yet; choose <em>More info → Run anyway</em>.</p>
+<h2 id="other-linux-systems">Other Linux systems</h2>
+<p>Download <code>uniform-chat-desktop-&lt;version&gt;-linux-x64.tar.gz</code> (or <code>linux-arm64</code>) from the <a href="https://github.com/tagcode/Uniform.Chat/releases">releases</a>, unpack it and run the app:</p>
+<pre><code class="lang-bash">tar -xzf uniform-chat-desktop-*-linux-x64.tar.gz
+cd uniform-chat-desktop-*-linux-x64
+./Uniform.Chat
+</code></pre>
+<p>You can also start it by double-clicking <code>Uniform.Chat</code> in the file manager.</p>
+<p>To add it to the application menu, run <code>./install-desktop-entry.sh</code> in the same folder. Run it again if you move the folder, and <code>./install-desktop-entry.sh --uninstall</code> removes the entry.</p>
+<h2 id="from-source">From source</h2>
+<p>With the <a href="https://dotnet.microsoft.com/download">.NET 10 SDK</a>, from the repository root:</p>
+<pre><code class="lang-bash">dotnet run --project src/Uniform.Chat.Desktop
+</code></pre>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.Chat.Desktop/articles/install.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

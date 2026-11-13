@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Commands | Uniform Chat Terminal </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Commands | Uniform Chat Terminal ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Uniform Chat Terminal">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/install.html" title="Guide">Guide</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="install.html" title="Installing" class="">Installing</a>
+                    </li>
+                    <li class="">
+                      <a href="getting-started.html" title="Getting started" class="">Getting started</a>
+                    </li>
+                    <li class="">
+                      <a href="interface.html" title="Interface" class="">Interface</a>
+                    </li>
+                    <li class="">
+                      <a href="messages.html" title="Messages" class="">Messages</a>
+                    </li>
+                    <li class="">
+                      <a href="joining.html" title="Joining rooms" class="">Joining rooms</a>
+                    </li>
+                    <li class="">
+                      <a href="files.html" title="Files and images" class="">Files and images</a>
+                    </li>
+                    <li class="">
+                      <a href="encryption.html" title="Encryption and devices" class="">Encryption and devices</a>
+                    </li>
+                    <li class="">
+                      <a href="rooms.html" title="Room administration" class="">Room administration</a>
+                    </li>
+                    <li class="">
+                      <a href="server-admin.html" title="Server administration" class="">Server administration</a>
+                    </li>
+                    <li class="active">
+                      <a href="commands.html" title="Commands" class="active">Commands</a>
+                    </li>
+                    <li class="">
+                      <a href="settings.html" title="Settings" class="">Settings</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Chat.Terminal.Commands.Article">
+<h1 id="commands">Commands</h1>
+
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/me text</code></td>
+<td>Action, shown as <code>* you text</code></td>
+</tr>
+<tr>
+<td><code>/plain text</code></td>
+<td>Send without Markdown formatting</td>
+</tr>
+<tr>
+<td><code>/join #room:server</code></td>
+<td>Join a room by alias, room ID or link; see <a class="xref" href="joining.html">Joining rooms</a></td>
+</tr>
+<tr>
+<td><code>/leave</code></td>
+<td>Leave the current room</td>
+</tr>
+<tr>
+<td><code>/topic text</code></td>
+<td>Set the topic</td>
+</tr>
+<tr>
+<td><code>/invite @user:server</code></td>
+<td>Invite a user</td>
+</tr>
+<tr>
+<td><code>/name text</code></td>
+<td>Set the room name</td>
+</tr>
+<tr>
+<td><code>/avatar [file]</code></td>
+<td>Set the room avatar from an image; <code>/avatar none</code> removes it</td>
+</tr>
+<tr>
+<td><code>/kick @user:server [reason]</code></td>
+<td>Remove a member</td>
+</tr>
+<tr>
+<td><code>/ban @user:server [reason]</code></td>
+<td>Remove a member and stop them joining again</td>
+</tr>
+<tr>
+<td><code>/unban @user:server</code></td>
+<td>Let a banned user back</td>
+</tr>
+<tr>
+<td><code>/power @user:server level</code></td>
+<td>Set a power level: a number, or <code>admin</code>, <code>moderator</code> or <code>member</code></td>
+</tr>
+<tr>
+<td><code>/op @user:server</code>, <code>/deop @user:server</code></td>
+<td>Make a member admin, or an ordinary member</td>
+</tr>
+<tr>
+<td><code>/msg @user:server</code></td>
+<td>Start a direct chat</td>
+</tr>
+<tr>
+<td><code>/nick name</code></td>
+<td>Set your display name</td>
+</tr>
+<tr>
+<td><code>/list [server]</code></td>
+<td>Browse the public rooms of your server, or of another server</td>
+</tr>
+<tr>
+<td><code>/create name</code></td>
+<td>Create a private room</td>
+</tr>
+<tr>
+<td><code>/create #room [name]</code></td>
+<td>Create a public room with the address <code>#room:yourserver</code>, listed in the room directory</td>
+</tr>
+<tr>
+<td><code>/alias #room</code>, <code>/unalias #room</code></td>
+<td>Add or remove an address of the current room</td>
+</tr>
+<tr>
+<td><code>/publish</code>, <code>/unpublish</code></td>
+<td>List the current room in your server's public room directory, or remove it</td>
+</tr>
+<tr>
+<td><code>/upload</code></td>
+<td>Send a file</td>
+</tr>
+<tr>
+<td><code>/devices</code></td>
+<td>Manage your sessions</td>
+</tr>
+<tr>
+<td><code>/settings</code></td>
+<td>View and change options</td>
+</tr>
+<tr>
+<td><code>/logs</code></td>
+<td>Read this and earlier session logs</td>
+</tr>
+<tr>
+<td><code>/call</code></td>
+<td>Voice call the other member of this direct chat</td>
+</tr>
+<tr>
+<td><code>/answer</code></td>
+<td>Answer the ringing call</td>
+</tr>
+<tr>
+<td><code>/reject</code></td>
+<td>Decline the ringing call</td>
+</tr>
+<tr>
+<td><code>/hangup</code></td>
+<td>End the call, or cancel one that rings</td>
+</tr>
+<tr>
+<td><code>/mute</code></td>
+<td>Mute or unmute your microphone in the call</td>
+</tr>
+<tr>
+<td><code>/audiotest</code></td>
+<td>Hear yourself a second later, through the Opus codec of calls, to test the microphone and speaker; close the dialog to stop</td>
+</tr>
+<tr>
+<td><code>/encryption</code></td>
+<td>Show encryption, recovery and backup state</td>
+</tr>
+<tr>
+<td><code>/recover</code></td>
+<td>Unlock older messages with the recovery key</td>
+</tr>
+<tr>
+<td><code>/verify [@user:server]</code></td>
+<td>Verify this device with your other devices, or a user, with emoji</td>
+</tr>
+<tr>
+<td><code>/ignore [@user:server]</code></td>
+<td>Block a user: their messages and invites no longer show; without a user, list whom you block</td>
+</tr>
+<tr>
+<td><code>/unignore @user:server</code></td>
+<td>Unblock a user</td>
+</tr>
+<tr>
+<td><code>/report [@user:server]</code></td>
+<td>Report a user, or without one this room, to your server's admins</td>
+</tr>
+<tr>
+<td><code>/whois [@user:server]</code></td>
+<td>A user's devices and the addresses they last connected from; yours without admin rights</td>
+</tr>
+<tr>
+<td><code>/accounts [text]</code>, <code>/rooms [text]</code></td>
+<td>Server admins: list and manage the server's accounts or rooms; see <a class="xref" href="server-admin.html">Server administration</a></td>
+</tr>
+<tr>
+<td><code>/suspend @user:server</code>, <code>/unsuspend @user:server</code></td>
+<td>Server admins: let the user read but not send, join or invite; or end it</td>
+</tr>
+<tr>
+<td><code>/lock @user:server</code>, <code>/unlock @user:server</code></td>
+<td>Server admins: refuse the account's sessions until unlocked</td>
+</tr>
+<tr>
+<td><code>/notice @user:server text</code></td>
+<td>Server admins: send a server notice</td>
+</tr>
+<tr>
+<td><code>/tokens</code>, <code>/reports</code></td>
+<td>Server admins: registration tokens, and users' reports</td>
+</tr>
+<tr>
+<td><code>/quit</code></td>
+<td>Exit</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.Chat.Terminal/articles/commands.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat Terminal</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

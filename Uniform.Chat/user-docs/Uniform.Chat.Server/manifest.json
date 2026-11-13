@@ -1,0 +1,170 @@
+{
+  "docfx_version": "2.81.0+ba844df625370a6bd7c1ecab0d0ec4d1d9128ac4",
+  "source_base_path": "/home/runner/work/Uniform.Chat/Uniform.Chat/user-docs/Uniform.Chat.Server",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/clients.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/clients.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/dashboard.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/dashboard.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/files.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/files.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/install.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/install.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/livekit.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/livekit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/remote-admin.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/remote-admin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/service.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/service.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/settings.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/settings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/troubleshooting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/turn.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/turn.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/updating.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/updating.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/usermanagement.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/usermanagement.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

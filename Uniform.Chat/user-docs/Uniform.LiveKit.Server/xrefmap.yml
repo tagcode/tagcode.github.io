@@ -1,0 +1,15 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Uniform.LiveKit.Server.Article
+  name: MatrixRTC authorization server
+  href: index.html
+- uid: Uniform.LiveKit.Server.Homeservers.Article
+  name: Homeservers
+  href: articles/homeservers.html
+- uid: Uniform.LiveKit.Server.Running.Article
+  name: Running
+  href: articles/running.html
+- uid: Uniform.LiveKit.Server.Settings.Article
+  name: Settings
+  href: articles/settings.html

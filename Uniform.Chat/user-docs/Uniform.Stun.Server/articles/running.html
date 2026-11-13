@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Running | Uniform STUN Server </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Running | Uniform STUN Server ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Uniform STUN Server">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/running.html" title="Guide">Guide</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="active">
+                      <a href="running.html" title="Running" class="active">Running</a>
+                    </li>
+                    <li class="">
+                      <a href="settings.html" title="Settings" class="">Settings</a>
+                    </li>
+                    <li class="">
+                      <a href="homeservers.html" title="Homeservers" class="">Homeservers</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Stun.Server.Running.Article">
+<h1 id="running">Running</h1>
+
+<h2 id="ports">Ports</h2>
+<p>The server must be reachable from the internet on these ports. Behind a home router, forward them to the server's computer:</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Protocol</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3478</td>
+<td>UDP and TCP</td>
+<td>STUN and TURN, <code>Turn:Port</code></td>
+</tr>
+<tr>
+<td>49152–65535</td>
+<td>UDP</td>
+<td>Relayed calls, <code>Turn:MinRelayPort</code> to <code>Turn:MaxRelayPort</code>; each call uses one or two</td>
+</tr>
+<tr>
+<td>5349, if set</td>
+<td>TCP</td>
+<td>TURN over TLS, <code>Turn:TlsPort</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="install">Install</h2>
+<p>Unpack the release anywhere. On Debian and Ubuntu, the releases are also an apt repository, for x64 and arm64: add it once, with its signing key, then install the server, which <code>sudo apt upgrade</code> keeps up to date. The command is then <code>uniform-stun-server</code> in place of <code>./uniform-stun-server</code> below.</p>
+<pre><code class="lang-bash">sudo install -d -m 0755 /etc/apt/keyrings
+curl -fsSL https://github.com/tagcode/Uniform.Chat/releases/latest/download/uniform-chat-archive-keyring.gpg | sudo tee /etc/apt/keyrings/uniform-chat.gpg &gt; /dev/null
+echo &quot;deb [signed-by=/etc/apt/keyrings/uniform-chat.gpg] https://github.com/tagcode/Uniform.Chat/releases/ latest/download/&quot; | sudo tee /etc/apt/sources.list.d/uniform-chat.list
+sudo apt update
+</code></pre>
+<pre><code class="lang-bash">sudo apt install uniform-stun-server
+</code></pre>
+<h2 id="first-start">First start</h2>
+<p>Give the server its public address and a shared secret. Put the secret in the settings file or an environment variable, not on the command line, where other users of the computer can see it:</p>
+<pre><code class="lang-bash">export Turn__SharedSecrets='a-long-random-secret'
+./uniform-stun-server --Turn:ExternalAddress=203.0.113.5 --Turn:Realm=example.org
+</code></pre>
+<p><code>Turn:ExternalAddress</code> is the public address peers send relayed calls to: the router's public address when the server is behind NAT. When it changes now and then, e.g. on a home connection, give a dynamic DNS name instead, which is resolved again every minute, or <code>stun:host:port</code> of a STUN server, which is asked every minute. Relays made after a change get the new address.</p>
+<p>The log tells where it listens:</p>
+<pre><code class="lang-text">TURN server listening on udp 0.0.0.0:3478, tcp 0.0.0.0:3478, relaying from 203.0.113.5 ports 49152-65535
+</code></pre>
+<p>When a setting cannot work, the server prints why and stops, e.g. without credentials or without an external address.</p>
+<p>Settings come from, later ones overriding earlier ones:</p>
+<ol>
+<li><code>appsettings.json</code> next to the program</li>
+<li><code>~/.config/uniform-stun-server/settings.json</code></li>
+<li>Environment variables, with <code>__</code> between parts: <code>Turn__Port=3478</code></li>
+<li>The command line: <code>--Turn:Port=3478</code></li>
+</ol>
+<p>Its log files are in <code>~/.local/share/uniform-stun-server/logs</code>, one per start.</p>
+<h2 id="as-a-system-service">As a system service</h2>
+<p>Unpack it in <code>/opt/uniform-stun-server</code>, create a user for it, and write the settings, with the secret, to <code>/etc/uniform-stun-server/settings.json</code>:</p>
+<pre><code class="lang-bash">sudo useradd --system --home-dir /var/lib/uniform-stun-server --shell /usr/sbin/nologin uniform-stun-server
+sudo mkdir -p /opt/uniform-stun-server /etc/uniform-stun-server
+sudo tar -xzf uniform-stun-server-&lt;version&gt;-linux-x64.tar.gz -C /opt/uniform-stun-server --strip-components=1
+sudo nano /etc/uniform-stun-server/settings.json
+sudo chown -R uniform-stun-server:uniform-stun-server /etc/uniform-stun-server
+sudo chmod 600 /etc/uniform-stun-server/settings.json
+</code></pre>
+<pre><code class="lang-json">{
+  &quot;Turn&quot;: {
+    &quot;Realm&quot;: &quot;example.org&quot;,
+    &quot;ExternalAddress&quot;: &quot;203.0.113.5&quot;,
+    &quot;SharedSecrets&quot;: &quot;a-long-random-secret&quot;
+  }
+}
+</code></pre>
+<p>Then the unit file <code>/etc/systemd/system/uniform-stun-server.service</code>:</p>
+<pre><code class="lang-ini">[Unit]
+Description=Uniform STUN and TURN server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=uniform-stun-server
+Group=uniform-stun-server
+ExecStart=/opt/uniform-stun-server/uniform-stun-server
+Environment=XDG_CONFIG_HOME=/etc
+Environment=XDG_DATA_HOME=/var/lib
+StateDirectory=uniform-stun-server
+Restart=on-failure
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/uniform-stun-server
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<pre><code class="lang-bash">sudo systemctl daemon-reload
+sudo systemctl enable --now uniform-stun-server
+journalctl -u uniform-stun-server -f
+</code></pre>
+<p>For TURN over TLS on port 443, which is below 1024, add <code>AmbientCapabilities=CAP_NET_BIND_SERVICE</code> to the <code>[Service]</code> section, and make the certificate readable by the user.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.Stun.Server/articles/running.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform STUN Server</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Uniform.Stun.Server.Article
+  name: STUN and TURN server
+  href: index.html
+- uid: Uniform.Stun.Server.Homeservers.Article
+  name: Homeservers
+  href: articles/homeservers.html
+- uid: Uniform.Stun.Server.Running.Article
+  name: Running
+  href: articles/running.html
+- uid: Uniform.Stun.Server.Settings.Article
+  name: Settings
+  href: articles/settings.html

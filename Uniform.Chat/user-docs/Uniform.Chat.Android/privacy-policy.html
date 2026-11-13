@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Privacy policy | Uniform Chat for Android </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Privacy policy | Uniform Chat for Android ">
+    
+    
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="Uniform Chat for Android">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="index.html" title="Guide">Guide</a>
+                      </li>
+                      <li>
+                          <a href="user-policy.html" title="User policy">User policy</a>
+                      </li>
+                      <li>
+                          <a href="privacy-policy.html" title="Privacy policy">Privacy policy</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Chat.Android.PrivacyPolicy.Article">
+<h1 id="privacy-policy">Privacy policy</h1>
+
+<p><em>Last updated: 9 November 2026</em></p>
+<p>This policy covers the Uniform Chat apps: the Android app, the desktop app and the terminal client. They are free, open-source <a href="https://matrix.org">Matrix</a> chat clients, developed in the open at <a href="https://github.com/tagcode/Uniform.Chat">github.com/tagcode/Uniform.Chat</a>.</p>
+<h2 id="in-short">In short</h2>
+<p>The developer of the apps collects nothing. The apps have no analytics, advertising, crash reporting or tracking, and send nothing to the developer. What you write and say goes to the Matrix server you choose, and from there to the people you talk with.</p>
+<h2 id="what-the-apps-send-and-where">What the apps send, and where</h2>
+<p>The apps talk only to:</p>
+<ul>
+<li><strong>Your Matrix server</strong>, the homeserver of your user ID, which you choose when you sign in or create an account. It receives what any Matrix app sends: your user ID and password when you sign in, your messages, files, reactions and profile, the rooms you join, read receipts and typing notices, the names of your devices, and your encryption keys' public parts. Your server keeps them and passes them on to the members of your rooms, who may be on other servers.</li>
+<li><strong>Call relays</strong> (TURN servers) that your server names, during voice calls, when the two phones cannot reach each other directly. Call audio is encrypted between the two ends; the relay cannot listen to it.</li>
+<li><strong>Media</strong>: pictures and files in your rooms are downloaded through your server.</li>
+<li><strong>A push distributor's server</strong>, only if you choose UnifiedPush in the settings: your server sends it a notice that a room has a new event, with the event's and room's IDs and your unread count, never the message, its sender or your user name; the distributor app on your phone then wakes this app. The notice goes through the distributor server's own Matrix gateway, which ntfy has, or else through the public gateway of the UnifiedPush project, matrix.gateway.unifiedpush.org. Without UnifiedPush, the app keeps its own connection to your server instead.</li>
+</ul>
+<p>In encrypted rooms, which are the default for new private rooms and direct chats, messages and files are end-to-end encrypted: only the members' devices can read them, not the servers. The servers still see who talks with whom, and when.</p>
+<p>What your server does with the data is set by its operator's own privacy policy and terms, which some servers show when you create an account. The developer of the apps does not run your server, unless you chose a server run by the developer, in which case its own policy applies.</p>
+<h2 id="what-stays-on-your-device">What stays on your device</h2>
+<p>The apps store your session, your messages, your encryption keys and your settings on your device, so that they work offline and start quickly. The encryption keys for network traffic are stored encrypted. Room messages are stored locally unencrypted, so that messages can be searched. Signing out ends the session on the server; uninstalling the Android app removes everything it stored.</p>
+<p>The apps keep a log files on the device, to help you find problems. They stay on the device.</p>
+<h2 id="permissions-on-android">Permissions on Android</h2>
+<ul>
+<li><strong>Internet and network state</strong>: to reach your server, and to reconnect when the phone changes networks.</li>
+<li><strong>Microphone</strong>: asked for the first time you place or answer a voice call, and used only during calls.</li>
+<li><strong>Notifications</strong>: to show new messages, incoming calls and an ongoing call.</li>
+<li><strong>Foreground services</strong>: to keep receiving messages and calls while the app is in the background, and to keep a call going with the screen off. A notification shows while they run.</li>
+<li><strong>Full-screen notifications, vibration and keeping the screen on</strong>: to ring for an incoming call, also on the lock screen.</li>
+</ul>
+<h2 id="deleting-your-data">Deleting your data</h2>
+<p>To delete your account, choose <em>Delete account</em> in the app: in <em>⋮ → Security and recovery</em> on Android and the desktop, or <em>File → Delete account</em> in the terminal client. You leave every room, your name and picture are removed from the server, and every device is signed out. Messages you sent before stay with the people who received them, as with email. For anything else your server keeps, ask its operator.</p>
+<h2 id="children">Children</h2>
+<p>The apps are not meant for children under 13.</p>
+<h2 id="changes-and-contact">Changes and contact</h2>
+<p>Changes to this policy are published here, with a new date at the top. Questions about the apps and this policy are welcome as an issue at <a href="https://github.com/tagcode/Uniform.Chat/issues">github.com/tagcode/Uniform.Chat/issues</a>.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.Chat.Android/privacy-policy.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat for Android</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

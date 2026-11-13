@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Settings | Uniform Chat Server </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Settings | Uniform Chat Server ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Uniform Chat Server">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/install.html" title="Guide">Guide</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="install.html" title="Installing" class="">Installing</a>
+                    </li>
+                    <li class="">
+                      <a href="dashboard.html" title="Run with the dashboard" class="">Run with the dashboard</a>
+                    </li>
+                    <li class="">
+                      <a href="service.html" title="Run without the dashboard" class="">Run without the dashboard</a>
+                    </li>
+                    <li class="active">
+                      <a href="settings.html" title="Settings" class="active">Settings</a>
+                    </li>
+                    <li class="">
+                      <a href="usermanagement.html" title="User Management" class="">User Management</a>
+                    </li>
+                    <li class="">
+                      <a href="remote-admin.html" title="Remote administration" class="">Remote administration</a>
+                    </li>
+                    <li class="">
+                      <a href="turn.html" title="Calls through firewalls" class="">Calls through firewalls</a>
+                    </li>
+                    <li class="">
+                      <a href="livekit.html" title="Video calls in Element X" class="">Video calls in Element X</a>
+                    </li>
+                    <li class="">
+                      <a href="clients.html" title="Connecting clients" class="">Connecting clients</a>
+                    </li>
+                    <li class="">
+                      <a href="files.html" title="Files" class="">Files</a>
+                    </li>
+                    <li class="">
+                      <a href="updating.html" title="Updating" class="">Updating</a>
+                    </li>
+                    <li class="">
+                      <a href="troubleshooting.html" title="Troubleshooting" class="">Troubleshooting</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Chat.Server.Settings.Article">
+<h1 id="settings">Settings</h1>
+
+<p>Settings come from these places; later ones override earlier ones:</p>
+<ol>
+<li><code>appsettings.json</code> next to the program</li>
+<li><code>~/.config/uniform-chat-server/settings.json</code>, written by the settings window</li>
+<li>Environment variables, with <code>__</code> between parts: <code>Server__Registration=Open</code></li>
+<li>The command line: <code>--Server:Registration=Open</code></li>
+<li>Changes applied in the settings window, until the server stops</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Urls</code></td>
+<td><code>http://localhost:8008</code></td>
+<td>Addresses to listen on, separated by <code>;</code>. ↻</td>
+</tr>
+<tr>
+<td><code>Server:ServerName</code></td>
+<td><code>localhost</code></td>
+<td>The name in user IDs and room aliases, such as <code>example.org</code> in <code>@alice:example.org</code>. Choose it before creating accounts: changing it later leaves every existing account and room behind. ↻</td>
+</tr>
+<tr>
+<td><code>Server:PublicBaseUrl</code></td>
+<td>not set</td>
+<td>The address clients should use, such as <code>https://matrix.example.org</code>. When set, the server announces it at <code>/.well-known/matrix/client</code>.</td>
+</tr>
+<tr>
+<td><code>Server:Registration</code></td>
+<td><code>Disabled</code></td>
+<td>Who can create accounts: <code>Disabled</code>, <code>Open</code> (anyone), or <code>Token</code> (anyone with a registration token).</td>
+</tr>
+<tr>
+<td><code>Server:TrustedProxies</code></td>
+<td>not set</td>
+<td>Addresses of reverse proxies, such as nginx, whose <code>X-Forwarded-For</code> header gives the client's address, separated by commas. Set it when the server runs behind a proxy, so rate limits count each client instead of the proxy. Other senders' headers are ignored. ↻</td>
+</tr>
+<tr>
+<td><code>Server:RegistrationTokens</code></td>
+<td>not set</td>
+<td>Tokens for <code>Token</code> registration, separated by commas; admins can also <a class="xref" href="remote-admin.html#registration-tokens">create tokens</a> with limited uses remotely.</td>
+</tr>
+<tr>
+<td><code>Server:TermsUrl</code></td>
+<td>not set</td>
+<td>Address of terms of service that new users accept when registering.</td>
+</tr>
+<tr>
+<td><code>Server:PrivacyPolicyUrl</code></td>
+<td>not set</td>
+<td>Address of a privacy policy that new users accept when registering.</td>
+</tr>
+<tr>
+<td><code>Server:PoliciesVersion</code></td>
+<td><code>1.0</code></td>
+<td>Version of the terms and privacy policy; raise it when they change.</td>
+</tr>
+<tr>
+<td><code>Server:ServerNoticesLocalpart</code></td>
+<td><code>notices</code></td>
+<td>Name of the account that sends <a class="xref" href="remote-admin.html#server-notices">server notices</a>, created without a password on the first notice.</td>
+</tr>
+<tr>
+<td><code>Media:MaxUploadSize</code></td>
+<td><code>52428800</code></td>
+<td>Largest file users can upload, in bytes (50 MiB).</td>
+</tr>
+<tr>
+<td><code>Media:MaxThumbnailSourcePixels</code></td>
+<td><code>40000000</code></td>
+<td>Largest image, in pixels, that thumbnails are made from; larger images get none.</td>
+</tr>
+<tr>
+<td><code>Media:AllowUnauthenticatedDownloads</code></td>
+<td><code>false</code></td>
+<td>Also serve files at the old <code>/_matrix/media/v3</code> download addresses, which need no login, for older clients. Anyone with a link can then fetch a file, so leave it off unless a client needs it.</td>
+</tr>
+<tr>
+<td><code>Media:PendingUploadLifetime</code></td>
+<td><code>1.00:00:00</code></td>
+<td>How long a client may take to upload a file it reserved an address for first.</td>
+</tr>
+<tr>
+<td><code>Media:MaxPendingUploads</code></td>
+<td><code>10</code></td>
+<td>How many reserved addresses a user may have waiting for their files.</td>
+</tr>
+<tr>
+<td><code>Push:AllowPrivateGateways</code></td>
+<td><code>false</code></td>
+<td>Send push notifications also to gateways at private and local network addresses, such as a push gateway on this machine. Off, so accounts cannot make the server reach machines inside your network.</td>
+</tr>
+<tr>
+<td><code>Push:GatewayTimeout</code></td>
+<td><code>00:00:10</code></td>
+<td>How long to wait for a push gateway to answer.</td>
+</tr>
+<tr>
+<td><code>UrlPreviews:Enabled</code></td>
+<td><code>false</code></td>
+<td>Make previews of linked pages (title, description and image) for clients that ask. Off by default: fetching tells the linked site that someone on this server posted the link, and in encrypted rooms it shows the server what was linked.</td>
+</tr>
+<tr>
+<td><code>UrlPreviews:AllowPrivateAddresses</code></td>
+<td><code>false</code></td>
+<td>Also preview pages at private and local network addresses. Off, so accounts cannot make the server reach machines inside your network.</td>
+</tr>
+<tr>
+<td><code>UrlPreviews:MaxSize</code></td>
+<td><code>2097152</code></td>
+<td>Most bytes read of a page or its image (2 MiB).</td>
+</tr>
+<tr>
+<td><code>UrlPreviews:Timeout</code></td>
+<td><code>00:00:10</code></td>
+<td>How long to wait for a page.</td>
+</tr>
+<tr>
+<td><code>UrlPreviews:CacheDuration</code></td>
+<td><code>01:00:00</code></td>
+<td>How long a preview is reused for the same address.</td>
+</tr>
+<tr>
+<td><code>RateLimits:Enabled</code></td>
+<td><code>true</code></td>
+<td>Limit how fast clients may write and log in. Clients that go over get an error telling them how long to wait; well-behaved clients wait and retry. ↻</td>
+</tr>
+<tr>
+<td><code>RateLimits:WriteBurst</code></td>
+<td><code>50</code></td>
+<td>Writes per login allowed at once: messages, state changes, invites, new rooms and uploads. ↻</td>
+</tr>
+<tr>
+<td><code>RateLimits:WritesPerSecond</code></td>
+<td><code>10</code></td>
+<td>Writes per login allowed each second after the burst. ↻</td>
+</tr>
+<tr>
+<td><code>RateLimits:LoginBurst</code></td>
+<td><code>20</code></td>
+<td>Logins and registrations from one address allowed at once. Behind a reverse proxy every request comes from the proxy's address, so these limits are shared by everyone. ↻</td>
+</tr>
+<tr>
+<td><code>RateLimits:LoginsPerMinute</code></td>
+<td><code>10</code></td>
+<td>Logins and registrations from one address allowed each minute after the burst. ↻</td>
+</tr>
+<tr>
+<td><code>Federation:Enabled</code></td>
+<td><code>false</code></td>
+<td>Talk to other Matrix servers: profiles, joining their rooms by ID or alias, invites both ways, messages, files and images, end-to-end encryption, typing, read receipts and presence. Still being built: received events are checked against the room's current state only, and state differences between servers are not resolved yet. Needs HTTPS with a real certificate.</td>
+</tr>
+<tr>
+<td><code>Federation:AllowPrivateAddresses</code></td>
+<td><code>false</code></td>
+<td>Also reach servers at private and local network addresses. Off, so remote server names cannot make the server reach machines inside your network.</td>
+</tr>
+<tr>
+<td><code>Federation:TrustedKeyServers</code></td>
+<td>not set</td>
+<td>Key servers to ask for other servers' signing keys when those servers cannot be reached, separated by commas, such as <code>matrix.org</code>. Asking tells the key server which servers this one talks to, so none are asked by default. With one set, joining a large room is much faster, as the keys of all its servers come in a few requests.</td>
+</tr>
+<tr>
+<td><code>Federation:RequestTimeout</code></td>
+<td><code>00:00:30</code></td>
+<td>How long to wait for another server to answer.</td>
+</tr>
+<tr>
+<td><code>Federation:JoinTimeout</code></td>
+<td><code>00:03:00</code></td>
+<td>How long to wait for another server to answer a join, which sends the whole state of the room.</td>
+</tr>
+<tr>
+<td><code>Federation:KeyRequestTimeout</code></td>
+<td><code>00:00:10</code></td>
+<td>How long to wait for a server's signing keys, from it or a key server.</td>
+</tr>
+<tr>
+<td><code>Federation:KeyValidity</code></td>
+<td><code>1.00:00:00</code></td>
+<td>How long other servers may keep this server's signing key before asking again.</td>
+</tr>
+<tr>
+<td><code>Federation:WellKnownServer</code></td>
+<td>not set</td>
+<td>Where other servers should connect, served as <code>/.well-known/matrix/server</code>, such as <code>example.org:443</code> when a reverse proxy on port 443 forwards to this server. Needed when the server name has no port and the server is not on port 8448.</td>
+</tr>
+<tr>
+<td><code>Calls:LiveKitServiceUrl</code></td>
+<td>not set</td>
+<td>Address of the MatrixRTC authorization service (lk-jwt-service) in front of a LiveKit server, for calls in Element X and other MatrixRTC clients. Announced to clients through <code>rtc/transports</code> and <code>/.well-known/matrix/client</code>. With <code>LiveKit:Enabled</code>, the built-in service at <code>/livekit/jwt</code> of <code>Server:PublicBaseUrl</code> when not set.</td>
+</tr>
+<tr>
+<td><code>Calls:TurnUris</code></td>
+<td>not set</td>
+<td>TURN server addresses for older 1:1 calls, separated by commas, such as <code>turn:turn.example.org:3478?transport=udp</code>.</td>
+</tr>
+<tr>
+<td><code>Calls:TurnSharedSecret</code></td>
+<td>not set</td>
+<td>Shared secret of the TURN server, such as coturn's <code>static-auth-secret</code>. Keep it out of command lines; set it in the settings file or as the environment variable <code>Calls__TurnSharedSecret</code>.</td>
+</tr>
+<tr>
+<td><code>Calls:TurnUserLifetime</code></td>
+<td><code>1.00:00:00</code></td>
+<td>How long TURN credentials hold.</td>
+</tr>
+<tr>
+<td><code>Calls:MaxEventDelay</code></td>
+<td><code>1.00:00:00</code></td>
+<td>Longest delay of a delayed event, which calls use to end the membership of a client that disappears. Delayed events are kept in the database, so a restart does not lose them; those due while the server was down are sent when it starts.</td>
+</tr>
+<tr>
+<td><code>Calls:OpenIdTokenLifetime</code></td>
+<td><code>01:00:00</code></td>
+<td>How long an OpenID token holds; call services use these tokens to check who a user is.</td>
+</tr>
+<tr>
+<td><code>LiveKit:Enabled</code></td>
+<td><code>false</code></td>
+<td>Serve the built-in MatrixRTC authorization service at <code>/livekit/jwt</code>, which gives Element X and other MatrixRTC clients tokens of your LiveKit server. See <a class="xref" href="livekit.html">Video calls in Element X</a>.</td>
+</tr>
+<tr>
+<td><code>LiveKit:Url</code></td>
+<td>not set</td>
+<td>Address of the LiveKit server that clients join, such as <code>wss://livekit.example.org</code>.</td>
+</tr>
+<tr>
+<td><code>LiveKit:ApiKey</code></td>
+<td>not set</td>
+<td>API key of the LiveKit server, one of the <code>keys</code> in its configuration.</td>
+</tr>
+<tr>
+<td><code>LiveKit:ApiSecret</code></td>
+<td>not set</td>
+<td>Secret of that API key. Keep it out of command lines; set it in the settings file or as the environment variable <code>LiveKit__ApiSecret</code>.</td>
+</tr>
+<tr>
+<td><code>LiveKit:FullAccessHomeservers</code></td>
+<td>not set</td>
+<td>Homeservers whose users may start calls and send audio and video, separated by commas, or <code>*</code> for all; users of other servers can only watch and listen in calls that are already going. This server's name when not set.</td>
+</tr>
+<tr>
+<td><code>LiveKit:TokenLifetime</code></td>
+<td><code>01:00:00</code></td>
+<td>How long a LiveKit token can be used to join; a call that has started goes on.</td>
+</tr>
+<tr>
+<td><code>LiveKit:CanUpdateOwnMetadata</code></td>
+<td><code>false</code></td>
+<td>Let participants change their own name and metadata in LiveKit.</td>
+</tr>
+<tr>
+<td><code>Turn:Enabled</code></td>
+<td><code>false</code></td>
+<td>Run the built-in STUN and TURN server, which relays calls between users whose networks would block them; calls then use it unless <code>Calls:TurnUris</code> names another. See <a class="xref" href="turn.html">Calls through firewalls</a>. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:Realm</code></td>
+<td>not set</td>
+<td>Realm of the TURN credentials; the server name when not set. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:ListenAddress</code></td>
+<td><code>0.0.0.0</code></td>
+<td>Address the TURN server listens on. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:Port</code></td>
+<td><code>3478</code></td>
+<td>Port of STUN and TURN over UDP and TCP. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:Tcp</code></td>
+<td><code>true</code></td>
+<td>Also listen over TCP on that port, for networks that block UDP. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:TlsPort</code></td>
+<td>not set</td>
+<td>Port of TURN over TLS, such as <code>5349</code>; none when not set. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:CertificatePath</code></td>
+<td>not set</td>
+<td>Certificate file of TURN over TLS; that of <code>Tls:CertificatePath</code> when not set. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:KeyPath</code></td>
+<td>not set</td>
+<td>Private key of that certificate; that of <code>Tls:KeyPath</code> when not set. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:ExternalAddress</code></td>
+<td>not set</td>
+<td>Public IPv4 address that relayed data is sent to, the router's public address when the server is behind NAT: a fixed address, a host name that is resolved again at every check, or <code>stun:host:port</code> to ask that STUN server. The host of <code>Server:PublicBaseUrl</code>, or else the server name, when not set. A changed address, e.g. after the router's DHCP lease, goes to new relays. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:AddressCheckInterval</code></td>
+<td><code>00:01:00</code></td>
+<td>How often the TURN server checks its local and public addresses for changes, besides when the system reports one. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:RelayAddress</code></td>
+<td>not set</td>
+<td>Address the relay ports bind; the listen address when not set. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:MinRelayPort</code></td>
+<td><code>49152</code></td>
+<td>First UDP port of relayed addresses. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:MaxRelayPort</code></td>
+<td><code>65535</code></td>
+<td>Last UDP port of relayed addresses; behind NAT, forward the whole range. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:MaxAllocations</code></td>
+<td><code>1000</code></td>
+<td>Most relays at once; a call uses one or two. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:MaxAllocationsPerUser</code></td>
+<td><code>10</code></td>
+<td>Most relays at once per user. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:AllowedPeers</code></td>
+<td>not set</td>
+<td>Private addresses relayed to anyway, separated by commas, such as <code>192.168.1.0/24</code>; private, loopback and link-local addresses are refused otherwise, so outsiders cannot reach your network through the server. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:SharedSecrets</code></td>
+<td>not set</td>
+<td>Further shared secrets of time-limited credentials, for other services than this homeserver. ↻</td>
+</tr>
+<tr>
+<td><code>Turn:Users</code></td>
+<td>not set</td>
+<td>Fixed users as <code>name:password</code>, separated by commas. Keep them out of command lines. ↻</td>
+</tr>
+<tr>
+<td><code>Tls:CertificatePath</code></td>
+<td>not set</td>
+<td>Certificate file for <code>https://</code> addresses in <code>Urls</code>, with its intermediate certificates, such as <a href="https://github.com/certbot/certbot">certbot</a>'s <code>fullchain.pem</code>. A path may start with <code>~/</code> for the home folder, also where the shell leaves it alone, as in <code>--Tls:CertificatePath=~/tls/fullchain.pem</code>. A renewed file is picked up within a minute, without a restart. ↻</td>
+</tr>
+<tr>
+<td><code>Tls:KeyPath</code></td>
+<td>not set</td>
+<td>Private key of the certificate, such as <a href="https://github.com/certbot/certbot">certbot</a>'s <code>privkey.pem</code>. Keep it readable only by the account that runs the server. ↻</td>
+</tr>
+<tr>
+<td><code>Storage:DataDirectory</code></td>
+<td><code>~/.local/share/uniform-chat-server</code></td>
+<td>Folder for the database, signing key, media and logs. ↻</td>
+</tr>
+<tr>
+<td><code>Storage:DatabaseFileName</code></td>
+<td><code>server.db</code></td>
+<td>Database file inside the data folder. ↻</td>
+</tr>
+<tr>
+<td><code>Storage:MediaDirectoryName</code></td>
+<td><code>media</code></td>
+<td>Folder inside the data folder for uploaded files. ↻</td>
+</tr>
+<tr>
+<td><code>Storage:LogDirectoryName</code></td>
+<td><code>logs</code></td>
+<td>Folder inside the data folder with one log file per session. ↻</td>
+</tr>
+<tr>
+<td><code>Storage:LogDirectory</code></td>
+<td>none</td>
+<td>Folder for the session logs anywhere, in place of the one inside the data folder; the apt package's service uses <code>/var/log/uniform-chat-server</code>. ↻</td>
+</tr>
+<tr>
+<td><code>Storage:LogFilesKept</code></td>
+<td><code>20</code></td>
+<td>How many session logs to keep. ↻</td>
+</tr>
+<tr>
+<td><code>Host:Ui</code></td>
+<td><code>Auto</code></td>
+<td><code>Auto</code>, <code>Dashboard</code> or <code>None</code>, see <a class="xref" href="service.html">Run without the dashboard</a>. ↻</td>
+</tr>
+<tr>
+<td><code>Host:AdminSocket</code></td>
+<td>none</td>
+<td>A local socket for <code>uniform-chat-server manage --socket=PATH</code>, e.g. <code>/run/uniform-chat-server/admin.sock</code>, which the service uses. Whoever may open it manages the server as an admin, without an account; the server lets only its own user and group open it. ↻</td>
+</tr>
+<tr>
+<td><code>Logging:LogLevel:Default</code></td>
+<td><code>Information</code></td>
+<td>Lowest level written to the log: <code>Trace</code>, <code>Debug</code>, <code>Information</code>, <code>Warning</code>, <code>Error</code>, <code>Critical</code> or <code>None</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>↻ marks options that take effect after a restart.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Without <code>Tls:*</code> the server speaks plain HTTP. Keep it on <code>localhost</code>, or give it a certificate, or put a reverse proxy such as Caddy or nginx in front of it, before letting other computers connect. Listening on all interfaces (<code>--Urls=http://0.0.0.0:8008</code>) without HTTPS sends passwords unencrypted.</p>
+</div>
+<p>To serve HTTPS itself, point the server at a certificate, for example <a href="https://github.com/certbot/certbot">certbot</a>'s files, and use <code>https://</code> addresses:</p>
+<pre><code class="lang-bash">./uniform-chat-server --Urls=&quot;https://0.0.0.0:8448&quot; \
+  --Tls:CertificatePath=/path/to/fullchain.pem --Tls:KeyPath=/path/to/privkey.pem
+</code></pre>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.Chat.Server/articles/settings.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat Server</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

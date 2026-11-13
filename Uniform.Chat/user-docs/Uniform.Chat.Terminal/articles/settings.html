@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Settings | Uniform Chat Terminal </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Settings | Uniform Chat Terminal ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Uniform Chat Terminal">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/install.html" title="Guide">Guide</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="install.html" title="Installing" class="">Installing</a>
+                    </li>
+                    <li class="">
+                      <a href="getting-started.html" title="Getting started" class="">Getting started</a>
+                    </li>
+                    <li class="">
+                      <a href="interface.html" title="Interface" class="">Interface</a>
+                    </li>
+                    <li class="">
+                      <a href="messages.html" title="Messages" class="">Messages</a>
+                    </li>
+                    <li class="">
+                      <a href="joining.html" title="Joining rooms" class="">Joining rooms</a>
+                    </li>
+                    <li class="">
+                      <a href="files.html" title="Files and images" class="">Files and images</a>
+                    </li>
+                    <li class="">
+                      <a href="encryption.html" title="Encryption and devices" class="">Encryption and devices</a>
+                    </li>
+                    <li class="">
+                      <a href="rooms.html" title="Room administration" class="">Room administration</a>
+                    </li>
+                    <li class="">
+                      <a href="server-admin.html" title="Server administration" class="">Server administration</a>
+                    </li>
+                    <li class="">
+                      <a href="commands.html" title="Commands" class="">Commands</a>
+                    </li>
+                    <li class="active">
+                      <a href="settings.html" title="Settings" class="active">Settings</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Chat.Terminal.Settings.Article">
+<h1 id="settings">Settings</h1>
+
+<p>Settings come from these places; later ones override earlier ones:</p>
+<ol>
+<li><code>appsettings.json</code> next to the program</li>
+<li><code>~/.config/uniform-chat-terminal/settings.json</code> (under <code>$XDG_CONFIG_HOME</code> when set), written by the settings window</li>
+<li>Environment variables, with <code>__</code> between parts: <code>Matrix__UserId=@alice:matrix.org</code></li>
+<li>The command line: <code>--Matrix:UserId=@alice:matrix.org</code></li>
+<li>Changes applied in the settings window, until the client exits</li>
+</ol>
+<h2 id="application-parameters">Application parameters</h2>
+<p>Every setting can be given on the command line as <code>--Section:Name=value</code>. The ones you need at the start:</p>
+<pre><code class="lang-bash">./Uniform.Chat --Matrix:UserId=@alice:matrix.org --Matrix:Password=secret
+</code></pre>
+<ul>
+<li><code>Matrix:UserId</code> is your full Matrix ID, such as <code>@alice:matrix.org</code>. It is needed at every start, as it chooses your local data; save it in the settings file to start without options. Without one, the client asks for it in the window.</li>
+<li><code>Matrix:Password</code> is used only for the first login. When it is not given, the client asks for it, which keeps it out of your shell history.</li>
+<li><code>Matrix:Homeserver</code> is the server address, for servers that cannot be found from the user ID.</li>
+</ul>
+<p><code>--help</code> lists every parameter with its default. All of them:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Matrix:UserId</code></td>
+<td>not set</td>
+<td>Your full Matrix ID, e.g. @alice:matrix.org. Needed at every start; save it in the settings file.</td>
+</tr>
+<tr>
+<td><code>Matrix:Password</code></td>
+<td>not set</td>
+<td>Password for the first login; asked for when not given. Not needed once you are logged in.</td>
+</tr>
+<tr>
+<td><code>Matrix:Homeserver</code></td>
+<td>not set</td>
+<td>Server address, when it cannot be found from the user ID, e.g. http://localhost:8008 for a server on this computer.</td>
+</tr>
+<tr>
+<td><code>Matrix:DeviceName</code></td>
+<td><code>Uniform Chat Terminal</code></td>
+<td>Display name of the device created at login.</td>
+</tr>
+<tr>
+<td><code>Matrix:SyncTimeout</code></td>
+<td><code>00:00:30</code></td>
+<td>Long-poll time of each sync request.</td>
+</tr>
+<tr>
+<td><code>Matrix:RequestTimeout</code></td>
+<td><code>00:05:00</code></td>
+<td>How long to wait for the server to answer a request; joining a large room on another server can take minutes.</td>
+</tr>
+<tr>
+<td><code>Matrix:TimelineLimit</code></td>
+<td><code>50</code></td>
+<td>Timeline events per room in each sync.</td>
+</tr>
+<tr>
+<td><code>Matrix:OutboxRetryInterval</code></td>
+<td><code>00:00:15</code></td>
+<td>Wait before retrying unsent messages after a transient failure.</td>
+</tr>
+<tr>
+<td><code>Storage:DataDirectory</code></td>
+<td>not set</td>
+<td>Root directory; when unset, the application's data directory, e.g. ~/.local/share/uniform-chat-terminal.</td>
+</tr>
+<tr>
+<td><code>Storage:DatabaseFileName</code></td>
+<td><code>client.db</code></td>
+<td>Database file name inside each account directory.</td>
+</tr>
+<tr>
+<td><code>Storage:MediaDirectoryName</code></td>
+<td><code>media</code></td>
+<td>Media cache directory name inside each account directory.</td>
+</tr>
+<tr>
+<td><code>Storage:LogDirectoryName</code></td>
+<td><code>logs</code></td>
+<td>Directory inside DataDirectory with one log file per session.</td>
+</tr>
+<tr>
+<td><code>Storage:LogFilesKept</code></td>
+<td><code>20</code></td>
+<td>Session log files to keep; older ones are deleted at start.</td>
+</tr>
+<tr>
+<td><code>Ui:StartRoom</code></td>
+<td>not set</td>
+<td>Room ID or alias to open at start; the first room in the list when null.</td>
+</tr>
+<tr>
+<td><code>Ui:InlineImages</code></td>
+<td><code>true</code></td>
+<td>Whether to show ASCII previews of images in the message log.</td>
+</tr>
+<tr>
+<td><code>Ui:ImagePreviewColumns</code></td>
+<td><code>0</code></td>
+<td>Widest preview in terminal columns; 0 fills the width of the message log.</td>
+</tr>
+<tr>
+<td><code>Ui:ImagePreviewRows</code></td>
+<td><code>0</code></td>
+<td>Tallest preview in terminal rows; 0 allows three quarters of the message log's height.</td>
+</tr>
+<tr>
+<td><code>Ui:ImagePreviewStyle</code></td>
+<td><code>Blocks</code></td>
+<td>Drawing style: Blocks shades, Ascii characters or Braille dots.</td>
+</tr>
+<tr>
+<td><code>Ui:DarkBackground</code></td>
+<td><code>true</code></td>
+<td>Whether the terminal background is dark, so bright pixels get dense characters.</td>
+</tr>
+<tr>
+<td><code>Ui:DownloadDirectory</code></td>
+<td>not set</td>
+<td>Folder that saved files go to; when null, ~/Downloads if it exists, otherwise the home folder.</td>
+</tr>
+<tr>
+<td><code>Ui:AskWhereToSave</code></td>
+<td><code>true</code></td>
+<td>Whether Save file asks where to save, starting from DownloadDirectory; otherwise files are saved there under a free name.</td>
+</tr>
+<tr>
+<td><code>Audio:Microphone</code></td>
+<td>not set</td>
+<td>Microphone: an ALSA device name on Linux, e.g. pulse, or part of the device's name on Windows; the system's default when null. The audio test lists the choices.</td>
+</tr>
+<tr>
+<td><code>Audio:Speaker</code></td>
+<td>not set</td>
+<td>Speaker: an ALSA device name on Linux, or part of the device's name on Windows; the system's default when null. The audio test lists the choices.</td>
+</tr>
+<tr>
+<td><code>Logging:LogLevel:Default</code></td>
+<td><code>Information</code></td>
+<td>Lowest level written to the log for categories without their own setting.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="settings-window">Settings window</h2>
+<p>File → Settings (or <code>/settings</code>) lists every option with its current value, where the value comes from, and a description of the selected option.</p>
+<ul>
+<li><strong>Edit</strong> (or Enter) changes the selected option; options with fixed values, such as yes/no or the image preview style, offer a list.</li>
+<li><strong>Apply</strong> uses the changes now, until the client exits. Options marked ↻ take effect only after a restart.</li>
+<li><strong>Save</strong> writes the changes to <code>~/.config/uniform-chat-terminal/settings.json</code> (under <code>$XDG_CONFIG_HOME</code> when set), which is read at every start.</li>
+<li><strong>Reset</strong> undoes one step at a time: first an edit that is not applied, then an applied change that is not saved. Pressed again, it removes the option from the settings file on save, so the default applies again.</li>
+<li><strong>Load</strong> reads another settings file as changes to apply or save; <strong>Export</strong> writes the current settings to a file.</li>
+</ul>
+<p>Edited options are marked <code>*</code>, applied but unsaved ones <code>+</code>. Values given on the command line override the settings file; the source column shows <code>command line</code> for them. The password is never shown or saved.</p>
+<h2 id="logs">Logs</h2>
+<p>View → Logs (or <code>/logs</code>) shows the log of this run and earlier ones; each run writes its own file, and the oldest beyond <code>Storage:LogFilesKept</code> are deleted. Pick a run on the left. <strong>Level</strong> cycles the lowest level shown, Alt+F focuses the text filter, and Enter shows a whole entry, such as an error with its stack trace. Warnings are yellow and errors red; the current run's log follows new lines while scrolled to the end.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.Chat.Terminal/articles/settings.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat Terminal</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

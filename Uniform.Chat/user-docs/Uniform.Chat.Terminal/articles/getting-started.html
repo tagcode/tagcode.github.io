@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Getting started | Uniform Chat Terminal </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Getting started | Uniform Chat Terminal ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Uniform Chat Terminal">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/install.html" title="Guide">Guide</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="install.html" title="Installing" class="">Installing</a>
+                    </li>
+                    <li class="active">
+                      <a href="getting-started.html" title="Getting started" class="active">Getting started</a>
+                    </li>
+                    <li class="">
+                      <a href="interface.html" title="Interface" class="">Interface</a>
+                    </li>
+                    <li class="">
+                      <a href="messages.html" title="Messages" class="">Messages</a>
+                    </li>
+                    <li class="">
+                      <a href="joining.html" title="Joining rooms" class="">Joining rooms</a>
+                    </li>
+                    <li class="">
+                      <a href="files.html" title="Files and images" class="">Files and images</a>
+                    </li>
+                    <li class="">
+                      <a href="encryption.html" title="Encryption and devices" class="">Encryption and devices</a>
+                    </li>
+                    <li class="">
+                      <a href="rooms.html" title="Room administration" class="">Room administration</a>
+                    </li>
+                    <li class="">
+                      <a href="server-admin.html" title="Server administration" class="">Server administration</a>
+                    </li>
+                    <li class="">
+                      <a href="commands.html" title="Commands" class="">Commands</a>
+                    </li>
+                    <li class="">
+                      <a href="settings.html" title="Settings" class="">Settings</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Chat.Terminal.GettingStarted.Article">
+<h1 id="getting-started">Getting started</h1>
+
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>A terminal with UTF-8 and colors: GNOME Terminal, Konsole, kitty, xterm, tmux, Windows Terminal, macOS Terminal</li>
+<li>An account on a Matrix homeserver, for example <code>@alice:matrix.org</code></li>
+</ul>
+<h2 id="install">Install</h2>
+<p>See <a class="xref" href="install.html">Installing</a>: with apt on Debian and Ubuntu, from the release archives on Windows and other Linux systems, or from source.</p>
+<h2 id="run">Run</h2>
+<p>Start the client; on Windows, run <code>Uniform.Chat.exe</code>:</p>
+<pre><code class="lang-bash">./Uniform.Matrix
+</code></pre>
+<p>Double-clicking <code>Uniform.Chat</code> in a file manager works too: on Linux it opens itself in a terminal window, the desktop's default terminal or the one in the <code>TERMINAL</code> environment variable.</p>
+<p>The first time, it asks for your full Matrix user ID, such as <code>@alice:matrix.org</code>. Give the server address too only when the server cannot be found from the user ID, for example <code>http://localhost:8008</code> for a server of your own on this computer. Then it asks for your password and logs in. After a successful login it saves the user ID and address to your settings, and remembers the session, so later runs start straight away without asking.</p>
+<p>You can also give them on the command line, which skips the question: <code>--Matrix:UserId=@alice:matrix.org</code>, and <code>--Matrix:Homeserver=http://localhost:8008</code> when needed. Without a terminal to ask in, for example with input redirected, the client prints this help instead. Messages are kept in a local database under <code>~/.local/share/uniform-chat-terminal/</code>, and messages you write are kept there until the server has received them, so nothing is lost when the connection drops.</p>
+<p>The window has a menu bar, a room list, the messages of the selected room and its members. Type a message and press Enter to send it; see <a class="xref" href="interface.html">Interface</a> for menus, keys and <code>/commands</code>.</p>
+<p>Settings can be changed in File → Settings, which saves them to <code>~/.config/uniform-chat-terminal/settings.json</code>; see <a class="xref" href="settings.html">Settings</a>, which also lists every command-line parameter. They can also go in <code>appsettings.json</code> next to the program, for example <code>&quot;Matrix&quot;: { &quot;UserId&quot;: &quot;@alice:matrix.org&quot; }</code>. Command-line options override both.</p>
+<p>Each run writes its own log under <code>~/.local/share/uniform-chat-terminal/logs/</code>; View → Logs shows them.</p>
+<p>To log out on the server, choose File → Log out. Quitting with Ctrl+Q keeps the session.</p>
+<h2 id="create-an-account">Create an account</h2>
+<p>On the first start, give the user ID you want, such as <code>@alice:example.org</code>, where the part after <code>:</code> is the server, and choose <em>Create account</em>. The client asks for a password twice, then for what the server needs: a registration token from the server's admin, and acceptance of its policies, shown with their addresses. It then creates the account and logs in. Many servers do not let apps create accounts: then make the account on the server's website and log in here.</p>
+<h2 id="delete-the-account">Delete the account</h2>
+<p><em>File → Delete account…</em> asks you to confirm, then for your password. You leave every room, your name and picture are removed, and every device is signed out. The account cannot be used again, and nobody can take its user ID. The client then quits and forgets the user ID.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Message</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>M_FORBIDDEN: Invalid username or password</code></td>
+<td>Wrong user ID or password.</td>
+</tr>
+<tr>
+<td><code>No valid m.homeserver.base_url for ...</code></td>
+<td>The server's discovery file is broken; contact its administrator.</td>
+</tr>
+<tr>
+<td><code>M_LIMIT_EXCEEDED ... (retry after N s)</code></td>
+<td>The server limits logins; wait N seconds.</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.Chat.Terminal/articles/getting-started.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat Terminal</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

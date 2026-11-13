@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Server administration | Uniform Chat Terminal </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Server administration | Uniform Chat Terminal ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Uniform Chat Terminal">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/install.html" title="Guide">Guide</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="install.html" title="Installing" class="">Installing</a>
+                    </li>
+                    <li class="">
+                      <a href="getting-started.html" title="Getting started" class="">Getting started</a>
+                    </li>
+                    <li class="">
+                      <a href="interface.html" title="Interface" class="">Interface</a>
+                    </li>
+                    <li class="">
+                      <a href="messages.html" title="Messages" class="">Messages</a>
+                    </li>
+                    <li class="">
+                      <a href="joining.html" title="Joining rooms" class="">Joining rooms</a>
+                    </li>
+                    <li class="">
+                      <a href="files.html" title="Files and images" class="">Files and images</a>
+                    </li>
+                    <li class="">
+                      <a href="encryption.html" title="Encryption and devices" class="">Encryption and devices</a>
+                    </li>
+                    <li class="">
+                      <a href="rooms.html" title="Room administration" class="">Room administration</a>
+                    </li>
+                    <li class="active">
+                      <a href="server-admin.html" title="Server administration" class="active">Server administration</a>
+                    </li>
+                    <li class="">
+                      <a href="commands.html" title="Commands" class="">Commands</a>
+                    </li>
+                    <li class="">
+                      <a href="settings.html" title="Settings" class="">Settings</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Chat.Terminal.ServerAdmin.Article">
+<h1 id="server-administration">Server administration</h1>
+
+<p>If you are an admin of your homeserver, the Server menu manages the server remotely: its accounts, registration tokens, reports and rooms. The client uses the admin API that Synapse defined, which Uniform Chat Server also has. For others, the server refuses with &quot;You are not a server admin.&quot;</p>
+<ul>
+<li><strong>Accounts</strong>, or <code>/accounts [text]</code>, lists the accounts whose user ID or name contains the text, with their devices, rooms and flags: admin, suspended, locked, deactivated. <strong>+ New account</strong> creates one with a password. Choose an account to:
+<ul>
+<li>see its devices and the addresses they last connected from (<strong>Who is</strong>, also <code>/whois @user</code>);</li>
+<li>send it a server notice;</li>
+<li>reset its password, which logs out its devices;</li>
+<li>suspend it, or end the suspension;</li>
+<li>lock it, or unlock it;</li>
+<li>make it a server admin, or take the rights away;</li>
+<li>deactivate it for good.</li>
+</ul>
+</li>
+<li><strong>Registration tokens</strong>, or <code>/tokens</code>, lists the tokens new accounts register with, with how often each was used and when it expires. Choose <strong>+ New token</strong> to create one: give its text or leave it empty for a random one, then how many accounts may use it and for how many days. Choose a token to delete it.</li>
+<li><strong>Reports</strong>, or <code>/reports</code>, lists what users reported, newest first. Choose a report to delete it, suspend the reported user, or shut the room down.</li>
+<li><strong>Rooms</strong>, or <code>/rooms [text]</code>, lists the server's rooms, most members first. Choose a room to see its members or shut it down.</li>
+<li><strong>Server notice</strong>, or <code>/notice @user text</code>, sends a message from the server. It arrives in the user's own Server notices room, where only the server writes.</li>
+<li><strong>Who is</strong> works for anyone on their own account.</li>
+</ul>
+<p>You cannot suspend, lock, deactivate or take admin rights from your own account, so you cannot shut yourself out.</p>
+<h2 id="suspend-and-lock">Suspend and lock</h2>
+<ul>
+<li><strong>Suspended:</strong> the user can still read, leave rooms and log out, but cannot send messages, join or create rooms, invite, change their profile or upload files. Use it while you look into a report.</li>
+<li><strong>Locked:</strong> the server refuses every request of the account until you unlock it. Its devices stay signed in and continue once it is unlocked; this client shows &quot;Retrying: The account is locked by an admin.&quot; meanwhile.</li>
+</ul>
+<p><code>/suspend @user</code> and <code>/unsuspend @user</code>, <code>/lock @user</code> and <code>/unlock @user</code> do the same from the message line.</p>
+<h2 id="shutting-down-a-room">Shutting down a room</h2>
+<p>Shutting a room down makes every member from your server leave and forget it, and deletes its addresses on your server; the reason you give is shown to them. <strong>Shut down and block</strong> also keeps your server's users from joining it again. Members from other servers stay in the room, and its messages stay on your server.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.Chat.Terminal/articles/server-admin.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat Terminal</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

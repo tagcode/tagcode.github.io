@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Calls through firewalls | Uniform Chat Server </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Calls through firewalls | Uniform Chat Server ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Uniform Chat Server">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/install.html" title="Guide">Guide</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="install.html" title="Installing" class="">Installing</a>
+                    </li>
+                    <li class="">
+                      <a href="dashboard.html" title="Run with the dashboard" class="">Run with the dashboard</a>
+                    </li>
+                    <li class="">
+                      <a href="service.html" title="Run without the dashboard" class="">Run without the dashboard</a>
+                    </li>
+                    <li class="">
+                      <a href="settings.html" title="Settings" class="">Settings</a>
+                    </li>
+                    <li class="">
+                      <a href="usermanagement.html" title="User Management" class="">User Management</a>
+                    </li>
+                    <li class="">
+                      <a href="remote-admin.html" title="Remote administration" class="">Remote administration</a>
+                    </li>
+                    <li class="active">
+                      <a href="turn.html" title="Calls through firewalls" class="active">Calls through firewalls</a>
+                    </li>
+                    <li class="">
+                      <a href="livekit.html" title="Video calls in Element X" class="">Video calls in Element X</a>
+                    </li>
+                    <li class="">
+                      <a href="clients.html" title="Connecting clients" class="">Connecting clients</a>
+                    </li>
+                    <li class="">
+                      <a href="files.html" title="Files" class="">Files</a>
+                    </li>
+                    <li class="">
+                      <a href="updating.html" title="Updating" class="">Updating</a>
+                    </li>
+                    <li class="">
+                      <a href="troubleshooting.html" title="Troubleshooting" class="">Troubleshooting</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Chat.Server.Turn.Article">
+<h1 id="calls-through-firewalls">Calls through firewalls</h1>
+
+<p>Voice calls go straight from one phone or computer to the other when the networks allow it. Many don't: mobile networks, office firewalls and some home routers block such direct traffic, and then the call connects but nobody hears anything. A TURN server fixes this by relaying the call. The server has one built in, which your users' calls use as soon as it is on. Element X and other apps that call through Element Call use a LiveKit server instead, see <a class="xref" href="livekit.html">Video calls in Element X</a>.</p>
+<h2 id="turning-it-on">Turning it on</h2>
+<p>The server must be reachable from the internet on these ports:</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Protocol</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3478</td>
+<td>UDP and TCP</td>
+<td>STUN and TURN, <code>Turn:Port</code></td>
+</tr>
+<tr>
+<td>49152–65535</td>
+<td>UDP</td>
+<td>Relayed calls, <code>Turn:MinRelayPort</code> to <code>Turn:MaxRelayPort</code></td>
+</tr>
+<tr>
+<td>5349, if set</td>
+<td>TCP</td>
+<td>TURN over TLS, <code>Turn:TlsPort</code></td>
+</tr>
+</tbody>
+</table>
+<p>Behind a home router, forward these ports to the server's computer. A smaller relay range is easier to forward and is enough for a small server; each call uses one or two ports:</p>
+<pre><code class="lang-bash">./uniform-chat-server --Turn:Enabled=true --Turn:MinRelayPort=50000 --Turn:MaxRelayPort=50099
+</code></pre>
+<p>The server then hands out credentials for its own TURN server to every call, with addresses made from the host name of <code>Server:PublicBaseUrl</code>. It needs to know the public address that relayed calls are sent to, <code>Turn:ExternalAddress</code>. When not set, it is looked up from that host name, which is right when the name points at your router. Set it when the name points elsewhere, e.g. at a proxy on another machine:</p>
+<pre><code class="lang-bash">./uniform-chat-server --Turn:Enabled=true --Turn:ExternalAddress=203.0.113.5
+</code></pre>
+<p>The log tells where it listens:</p>
+<pre><code class="lang-text">TURN server listening on udp 0.0.0.0:3478, tcp 0.0.0.0:3478, relaying from 203.0.113.5 ports 50000-50099
+</code></pre>
+<p>When a setting is wrong, the log says so and the homeserver runs on without the TURN server.</p>
+<h2 id="changing-addresses">Changing addresses</h2>
+<p>Home connections often get a new public address now and then, e.g. when the router renews its DHCP lease or restarts. The server checks every minute, and whenever the computer's own addresses change. A host name in <code>Turn:ExternalAddress</code>, as of a dynamic DNS service, is resolved again then, and relays made after a change get the new address. Calls going on at the change break anyway, as the old address no longer reaches your router; the apps connect them again.</p>
+<p>A dynamic DNS name can lag behind a change. To ask a STUN server instead, which sees the new address at once, set <code>Turn:ExternalAddress=stun:stun.example.org:3478</code>, naming a STUN server you trust.</p>
+<p>The server also follows its own addresses: listening on <code>0.0.0.0</code>, the default, it starts listening on a new address of the computer and stops on one that is gone.</p>
+<h2 id="over-tls">Over TLS</h2>
+<p>Some networks only let web traffic through. TURN over TLS gets through more of them, especially on port 443 when nothing else uses that port on the address:</p>
+<pre><code class="lang-bash">./uniform-chat-server --Turn:Enabled=true --Turn:TlsPort=5349
+</code></pre>
+<p>It uses the certificate of <code>Tls:CertificatePath</code> and <code>Tls:KeyPath</code>, or of <code>Turn:CertificatePath</code> and <code>Turn:KeyPath</code>. A renewed certificate is used without a restart.</p>
+<h2 id="safety">Safety</h2>
+<p>Only your users can use the relay: each call gets credentials that expire after <code>Calls:TurnUserLifetime</code>. The server refuses to relay to private, loopback and link-local addresses, so nobody can reach your local network through it, and limits how many relays a user and the whole server may have. <code>Turn:AllowedPeers</code> lets calls reach chosen private addresses anyway, e.g. when the users of a local network call each other through it.</p>
+<h2 id="another-turn-server">Another TURN server</h2>
+<p>To use another TURN server, such as coturn or <code>uniform-stun-server</code>, the standalone TURN server of this project, leave <code>Turn:Enabled</code> off and set <code>Calls:TurnUris</code> and <code>Calls:TurnSharedSecret</code>. The secret must be the same on both servers: <code>static-auth-secret</code> of coturn, <code>Turn:SharedSecrets</code> of <code>uniform-stun-server</code>.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.Chat.Server/articles/turn.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat Server</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Encryption and devices | Uniform Chat Terminal </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Encryption and devices | Uniform Chat Terminal ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.json">
+      <meta property="docfx:tocrel" content="toc.json">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Uniform Chat Terminal">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/install.html" title="Guide">Guide</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="install.html" title="Installing" class="">Installing</a>
+                    </li>
+                    <li class="">
+                      <a href="getting-started.html" title="Getting started" class="">Getting started</a>
+                    </li>
+                    <li class="">
+                      <a href="interface.html" title="Interface" class="">Interface</a>
+                    </li>
+                    <li class="">
+                      <a href="messages.html" title="Messages" class="">Messages</a>
+                    </li>
+                    <li class="">
+                      <a href="joining.html" title="Joining rooms" class="">Joining rooms</a>
+                    </li>
+                    <li class="">
+                      <a href="files.html" title="Files and images" class="">Files and images</a>
+                    </li>
+                    <li class="active">
+                      <a href="encryption.html" title="Encryption and devices" class="active">Encryption and devices</a>
+                    </li>
+                    <li class="">
+                      <a href="rooms.html" title="Room administration" class="">Room administration</a>
+                    </li>
+                    <li class="">
+                      <a href="server-admin.html" title="Server administration" class="">Server administration</a>
+                    </li>
+                    <li class="">
+                      <a href="commands.html" title="Commands" class="">Commands</a>
+                    </li>
+                    <li class="">
+                      <a href="settings.html" title="Settings" class="">Settings</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Chat.Terminal.Encryption.Article">
+<h1 id="encryption-and-devices">Encryption and devices</h1>
+
+<h2 id="encryption">Encryption</h2>
+<p>Messages in encrypted rooms are encrypted on your device before they leave it, and only the devices of the people in the room can read them; the server only sees ciphertext. New private rooms and direct chats are encrypted from the start, and encryption cannot be turned off for a room again.</p>
+<p>The <strong>recovery key</strong> lets a new sign-in prove it is you and read messages from before it existed. Setting up recovery creates three things: cross-signing keys, which vouch for your devices; a backup of message keys on the server, encrypted so the server cannot read it; and the recovery key itself, which is shown once. Write it down or copy it somewhere safe. If you set up recovery in another app, such as Element, use that app's recovery key or passphrase.</p>
+<p><strong>Verification</strong> compares seven emoji on two devices to prove that no one is in between. Both devices must show the same emoji in the same order; if they differ, cancel, and nothing is trusted. A device you verified receives the cross-signing and backup keys, so it does not need the recovery key. You can also verify other people, so you know their devices are really theirs.</p>
+
+<p>In the terminal client, the room's frame shows <code>[encrypted]</code>.</p>
+<ul>
+<li>Room → Enable encryption turns it on for an existing room.</li>
+<li>File → Encryption shows this device's ID and fingerprint, and whether cross-signing, key backup and the recovery key are set up. Other clients, such as Element, list the same fingerprint for this session.</li>
+<li>A message that arrived before its key shows <code>[encrypted message; the key has not arrived]</code> and is decrypted as soon as the key comes. Your other verified devices are asked for missing keys automatically.</li>
+<li>Files sent to encrypted rooms are encrypted too; previews and Save file decrypt them on this device.</li>
+<li>If encryption is not available on this computer, messages to encrypted rooms are not sent; they are shown in red with the reason, so nothing is ever sent unencrypted by mistake.</li>
+</ul>
+<h3 id="recovery-key-and-key-backup">Recovery key and key backup</h3>
+<ul>
+<li><strong>Set up recovery</strong> (File → Encryption) is offered only when your account has no cross-signing yet. The server may ask for your password.</li>
+<li>While a backup is on, new room keys are uploaded to it.</li>
+<li><strong>Recover</strong> (File → Encryption, or <code>/recover</code>) on a new sign-in asks for the recovery key, or the passphrase if you set one in another client. It verifies this device, restores the key backup and decrypts the stored messages that were waiting for keys.</li>
+</ul>
+<h3 id="verifying-devices">Verifying devices</h3>
+<ul>
+<li>File → Verify this device (or <code>/verify</code>) asks your other devices to verify this one: accept on a device that is already trusted and compare the emoji. <em>Verify selected</em> in File → Devices verifies the device you pick. <code>/verify @user:server</code> verifies another person. When someone asks to verify you from their app, such as Element, in your direct chat, the request shows there as a message and the client asks you to accept it.</li>
+<li>File → Devices marks devices that your current identity has not signed as <em>Not trusted</em>, on red. Only a trusted device can vouch for another, so verify an untrusted device with a trusted one, or use your recovery key.</li>
+<li>Accept on the other device. When both show the same emoji, choose <strong>They match</strong> on both; if they differ, choose <strong>They don't match</strong>.</li>
+<li>File → Devices shows each device as verified, cross-signed (verified through your cross-signing keys) or unverified. Room keys and secrets are shared only with your verified or cross-signed devices.</li>
+</ul>
+<h2 id="devices">Devices</h2>
+<p>File → Devices (or <code>/devices</code>) lists your sessions with their last activity; this one is marked <code>*</code>. You can rename a device, or log out one or all other devices, which asks for your password. To end this session, use File → Log out.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/user-docs/Uniform.Chat.Terminal/articles/encryption.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat Terminal</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

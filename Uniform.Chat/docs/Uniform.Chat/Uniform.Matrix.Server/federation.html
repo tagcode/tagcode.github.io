@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Federation | Uniform Chat Developer Guide </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Federation | Uniform Chat Developer Guide ">
+    
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.json">
+      <meta property="docfx:tocrel" content="../toc.json">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="Uniform Chat">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../../Uniform.Chat/index.html" title="Uniform.Matrix">Uniform.Matrix</a>
+                      </li>
+                      <li>
+                          <a href="../../api/LiveKit.Proto.html" title="API">API</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Protocol.Core</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Core/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Protocol.Client</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Client/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Client/log-in.html" title="Log in" class="">Log in</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Client/receive-events.html" title="Receive events" class="">Receive events</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Client/rooms-and-messages.html" title="Rooms and messages" class="">Rooms and messages</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Client/directories-and-account-data.html" title="Directories and account data" class="">Directories and account data</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Client/files-and-devices.html" title="Files and devices" class="">Files and devices</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Client/errors.html" title="Errors" class="">Errors</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Protocol.Crypto</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Crypto/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Hosting</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Hosting/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Gui.Terminal</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Gui.Terminal/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Audio</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Audio/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Video</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Video/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Stun.Protocol</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Stun.Protocol/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Stun</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Stun/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.LiveKit.Protocol</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.LiveKit.Protocol/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.LiveKit</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.LiveKit/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.WebRtc</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.WebRtc/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Client</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Client/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Client/room-state.html" title="Room state" class="">Room state</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Client/rich-text.html" title="Rich text" class="">Rich text</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Client/local-storage.html" title="Local storage" class="">Local storage</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Client/outbox.html" title="Outbox" class="">Outbox</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Client/track-rooms.html" title="Track rooms" class="">Track rooms</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Calls</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Calls/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Chat.Terminal</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Chat.Terminal/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Chat.Avalonia</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Chat.Avalonia/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Chat.Avalonia/view-models.html" title="View models" class="">View models</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Chat.Avalonia/views.html" title="Views" class="">Views</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Chat.Desktop</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Chat.Desktop/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Chat.Android</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Chat.Android/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Protocol.Server</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Protocol.Server/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Matrix.Server</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/requests.html" title="Requests" class="">Requests</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/storage.html" title="Storage" class="">Storage</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/events-and-state.html" title="Events and state" class="">Events and state</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/sync.html" title="Sync and the stream" class="">Sync and the stream</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/services.html" title="Services" class="">Services</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/push.html" title="Push rules and pushers" class="">Push rules and pushers</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/presence.html" title="Presence" class="">Presence</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/url-previews.html" title="URL previews" class="">URL previews</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/rate-limits.html" title="Rate limits" class="">Rate limits</a>
+                          </li>
+                          <li class="active">
+                            <a href="../Uniform.Matrix.Server/federation.html" title="Federation" class="active">Federation</a>
+                          </li>
+                          <li class="">
+                            <a href="../Uniform.Matrix.Server/testing.html" title="Testing" class="">Testing</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Chat.Server</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Chat.Server/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Turn</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Turn/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Stun.Hosting</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Stun.Hosting/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.Stun.Server</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.Stun.Server/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.LiveKit.Authorization</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.LiveKit.Authorization/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.LiveKit.Hosting</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.LiveKit.Hosting/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Uniform.LiveKit.Server</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="../Uniform.LiveKit.Server/index.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                      <a href="../building.html" title="Building" class="">Building</a>
+                    </li>
+                    <li class="">
+                      <a href="../testing.html" title="Testing" class="">Testing</a>
+                    </li>
+                    <li class="">
+                      <a href="../documentation.html" title="Documentation" class="">Documentation</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Uniform.Matrix.Server.Federation.Article">
+<h1 id="federation">Federation</h1>
+
+<p>Federation is being built, behind <code>Federation:Enabled</code>. In <code>Federation/</code>:</p>
+<ul>
+<li><a class="xref" href="../../api/Uniform.Matrix.Server.Federation.ServerResolver.html"><code>ServerResolver</code></a> finds other servers as the spec's <a href="https://spec.matrix.org/latest/server-server-api/#resolving-server-names">server name resolution</a> says: IP literals and names with a port directly, otherwise <code>/.well-known/matrix/server</code> delegation, then SRV records (<code>_matrix-fed._tcp</code>, then the deprecated <code>_matrix._tcp</code>), else port 8448. <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.SrvLookup.html"><code>SrvLookup</code></a> asks the system's name servers over UDP with the messages of <a class="xref" href="../../api/Uniform.Matrix.Protocol.Server.DnsSrv.html"><code>DnsSrv</code></a>; with an SRV record the connection goes to its target, while the <code>Host</code> header, and with it the TLS name, stays the server name.</li>
+<li><a class="xref" href="../../api/Uniform.Matrix.Server.Federation.FederationClient.html"><code>FederationClient</code></a> sends requests signed with <a class="xref" href="../../api/Uniform.Matrix.Protocol.Server.FederationAuth.html"><code>FederationAuth</code></a> (in <a class="xref" href="../Uniform.Matrix.Protocol.Server/index.html"><code>Uniform.Matrix.Protocol.Server</code></a>) as an <code>X-Matrix</code> authorization, through the same public-addresses-only handler as push gateways and URL previews.</li>
+<li><a class="xref" href="../../api/Uniform.Matrix.Server.Federation.RemoteServerKeys.html"><code>RemoteServerKeys</code></a> fetches other servers' keys from their <code>/_matrix/key/v2/server</code>, else from the key servers of <code>Federation:TrustedKeyServers</code> (whose own signature is checked too), accepts them only when every listed key signed the answer, and keeps the answer in <code>ServerKeyResponses</code> until <code>valid_until_ts</code>, at most a week. Old keys count for signatures too, and when nothing can be fetched the last answer is used even when expired. <code>/_matrix/key/v2/query</code> answers as a key server, each answer countersigned.</li>
+<li><a class="xref" href="../../api/Uniform.Matrix.Server.Federation.ServerAuthentication.html"><code>ServerAuthentication</code></a> is middleware on endpoints marked <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.ServerAuthentication.html#Uniform_Matrix_Server_Federation_ServerAuthentication_RequireFederation_"><code>RequireFederation()</code></a>: it buffers the body, checks the signature over the raw request target, and gives the endpoint the origin with <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.ServerAuthentication.html#Uniform_Matrix_Server_Federation_ServerAuthentication_GetOrigin_"><code>GetOrigin()</code></a>.</li>
+</ul>
+<p><a class="xref" href="../../api/Uniform.Matrix.Server.Endpoints.FederationEndpoints.html"><code>FederationEndpoints</code></a> serves <code>/_matrix/key/v2/server</code>, <code>/_matrix/federation/v1/version</code>, <code>query/profile</code>, <code>make_join</code>, <code>send_join</code> (v2) and <code>send</code>, and <a class="xref" href="../../api/Uniform.Matrix.Server.Accounts.ProfileService.html"><code>ProfileService</code></a> asks other servers for their users' profiles.</p>
+<p>Joins: <a class="xref" href="../../api/Uniform.Matrix.Server.Rooms.RoomService.html#Uniform_Matrix_Server_Rooms_RoomService_JoinAsync_"><code>RoomService.JoinAsync</code></a> sends joins of room IDs of other servers that are not here to <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.RemoteJoins.html"><code>RemoteJoins</code></a>, which asks the room's server for a <code>make_join</code> template, signs it, sends it with <code>send_join</code>, fetches the signing keys of every sending server at once (<a class="xref" href="../../api/Uniform.Matrix.Server.Federation.RemoteServerKeys.html#Uniform_Matrix_Server_Federation_RemoteServerKeys_PrefetchAsync_"><code>RemoteServerKeys.PrefetchAsync</code></a>: the key servers first, in batches, then each server, 20 at a time, each waiting at most <code>Federation:KeyRequestTimeout</code>), checks the content hash and signature of every returned event and the auth rules against each event's own auth events (<a class="xref" href="../../api/Uniform.Matrix.Protocol.Server.AuthRules.html#Uniform_Matrix_Protocol_Server_AuthRules_CheckAuthChains_"><code>AuthRules.CheckAuthChains</code></a>), drops the events that fail, as other servers do, and stores the room with <a class="xref" href="../../api/Uniform.Matrix.Server.Rooms.EventSender.html#Uniform_Matrix_Server_Rooms_EventSender_StoreJoinedRoomAsync_"><code>EventSender.StoreJoinedRoomAsync</code></a>. The returned state and auth chain get negative stream positions, so they sort as history before the join and never count as new. On the resident side <a class="xref" href="../../api/Uniform.Matrix.Server.Rooms.EventSender.html#Uniform_Matrix_Server_Rooms_EventSender_MakeMembershipAsync_"><code>EventSender.MakeMembershipAsync</code></a> builds the template and <a class="xref" href="../../api/Uniform.Matrix.Server.Rooms.EventSender.html#Uniform_Matrix_Server_Rooms_EventSender_AcceptMembershipAsync_"><code>AcceptMembershipAsync</code></a> checks the signed join (its ID, hash, origin and the auth rules) before storing it like a local event.</p>
+<p>Transactions: <code>/send</code> hands each PDU to <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.RemoteEvents.html"><code>RemoteEvents</code></a>, which first asks the sending server for up to 20 events missing before it (<code>get_missing_events</code>) and accepts them oldest first, then hands the PDU to <a class="xref" href="../../api/Uniform.Matrix.Server.Rooms.EventSender.html#Uniform_Matrix_Server_Rooms_EventSender_AcceptEventAsync_"><code>EventSender.AcceptEventAsync</code></a>, which runs the <a href="https://spec.matrix.org/latest/server-server-api/#checks-performed-on-receipt-of-a-pdu">checks on receipt</a>; see below. When previous or auth events are still missing after that, <code>RemoteEvents</code> asks for the state before the event with <code>/state_ids</code>, fetches the events of it that are not here with <code>/event</code>, and stores them as history. <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.FederationSender.html"><code>FederationSender</code></a> follows <a class="xref" href="../../api/Uniform.Matrix.Server.Sync.ServerStream.html"><code>ServerStream</code></a> and hands local users' events, remote joins this server accepted, and local users' device changes (<code>m.device_list_update</code>) to <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.FederationQueue.html"><code>FederationQueue</code></a>. The queue keeps one batch per destination (up to 50 PDUs and 100 EDUs per transaction) and retries failures with pauses doubling from 2 seconds to 5 minutes; a 4xx refusal other than 429 drops the batch. PDUs and the EDUs that matter later are also kept in the <code>FederationOutbox</code> table until sent, and <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.FederationQueue.html#Uniform_Matrix_Server_Federation_FederationQueue_ResumeAsync_"><code>FederationQueue.ResumeAsync</code></a> queues them again at start; typing and presence stay in memory. <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.RemoteActivity.html"><code>RemoteActivity</code></a> sends and receives typing (<code>m.typing</code>) and public read receipts (<code>m.receipt</code>); <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.RemoteDevices.html"><code>RemoteDevices</code></a> handles keys across servers (<code>user/keys/query</code>, <code>user/keys/claim</code>, <code>user/devices</code>) and to-device messages (<code>m.direct_to_device</code>). Presence is not shared between servers yet.</p>
+<p>Invites of other servers' users: <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.RemoteInvites.html"><code>RemoteInvites</code></a> signs the invite with <a class="xref" href="../../api/Uniform.Matrix.Server.Rooms.EventSender.html#Uniform_Matrix_Server_Rooms_EventSender_SignAsync_"><code>EventSender.SignAsync</code></a> (built and checked, not stored), sends it with <code>invite</code> v2 and the stripped room state from <a class="xref" href="../../api/Uniform.Matrix.Server.Rooms.EventSender.html#Uniform_Matrix_Server_Rooms_EventSender_InviteRoomStateAsync_"><code>EventSender.InviteRoomStateAsync</code></a>, checks that the invitee's server signed the same event, and stores it through <a class="xref" href="../../api/Uniform.Matrix.Server.Rooms.EventSender.html#Uniform_Matrix_Server_Rooms_EventSender_AcceptEventAsync_"><code>AcceptEventAsync</code></a>. Receiving invites is not there yet.</p>
+<p>Joins and leaves of other servers' users go through <a class="xref" href="../../api/Uniform.Matrix.Server.Rooms.EventSender.html#Uniform_Matrix_Server_Rooms_EventSender_MakeMembershipAsync_"><code>EventSender.MakeMembershipAsync</code></a> and <a class="xref" href="../../api/Uniform.Matrix.Server.Rooms.EventSender.html#Uniform_Matrix_Server_Rooms_EventSender_AcceptMembershipAsync_"><code>AcceptMembershipAsync</code></a>; <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.RemoteJoins.html#Uniform_Matrix_Server_Federation_RemoteJoins_RejectInviteAsync_"><code>RemoteJoins.RejectInviteAsync</code></a> rejects an invite to a room not here through the inviting server. <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.RemoteJoins.html#Uniform_Matrix_Server_Federation_RemoteJoins_ResolveAliasAsync_"><code>RemoteJoins.ResolveAliasAsync</code></a> asks <code>query/directory</code> for aliases of other servers. <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.RoomHistory.html"><code>RoomHistory</code></a> answers <code>get_missing_events</code>, <code>backfill</code>, <code>event</code>, <code>state</code> and <code>state_ids</code> for servers with a member in the room. Presence of local users goes out as <code>m.presence</code> EDUs from <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.FederationSender.html"><code>FederationSender</code></a>; <a class="xref" href="../../api/Uniform.Matrix.Server.Accounts.PresenceService.html#Uniform_Matrix_Server_Accounts_PresenceService_SetRemoteAsync_"><code>PresenceService.SetRemoteAsync</code></a> keeps remote users' presence, which their server ends.</p>
+<p>Version 12 rooms are created by <a class="xref" href="../../api/Uniform.Matrix.Server.Rooms.EventSender.html#Uniform_Matrix_Server_Rooms_EventSender_CreateHashedRoomAsync_"><code>EventSender.CreateHashedRoomAsync</code></a>, which signs the create event before the room row exists, as the room ID is its hash. Version 12 is the default for new rooms. Their IDs name no server, so joining one by ID needs <code>via</code> servers, which both clients send.</p>
+<p>Sliding sync (<a class="xref" href="../../api/Uniform.Matrix.Server.Sync.SlidingSyncService.html"><code>SlidingSyncService</code></a>, <code>POST /_matrix/client/unstable/org.matrix.simplified_msc3575/sync</code>) builds rooms with <a class="xref" href="../../api/Uniform.Matrix.Server.Sync.SyncService.html"><code>SyncService</code></a>, from the start for rooms a connection has not had and since its position for the others, and reshapes them into lists, room subscriptions and the to-device, e2ee, account data, receipts and typing extensions. Connections live in memory; an unknown position gets <code>M_UNKNOWN_POS</code>.</p>
+<p><code>Server:TrustedProxies</code> turns on ASP.NET Core's forwarded headers for those addresses only.</p>
+<p>Room summaries (<code>/v1/room_summary</code> and the unstable <code>im.nheko.summary</code> paths) and space hierarchies (<code>/v1/rooms/{roomId}/hierarchy</code>, and <code>/_matrix/federation/v1/hierarchy</code> for other servers; rooms not here are asked from servers in them, the <code>via</code> servers a client gives, the alias's servers or the room ID's server, through federation <code>hierarchy</code>) come from <a class="xref" href="../../api/Uniform.Matrix.Server.Rooms.DirectoryService.html"><code>DirectoryService</code></a>, shown to members and invitees, and to anyone for public, knockable or world-readable rooms. <a class="xref" href="../../api/Uniform.Matrix.Server.Sync.SyncService.html"><code>SyncService</code></a> answers <code>/v1/rooms/{roomId}/relations</code> (found by the related event's ID in the stored JSON, then checked), <code>/v1/rooms/{roomId}/threads</code> and <code>timestamp_to_event</code>; relations are also kept in the <code>EventRelations</code> table, from which thread roots get their <code>m.thread</code> summary in <code>unsigned</code>. Reports of content, rooms and users are kept by <a class="xref" href="../../api/Uniform.Matrix.Server.Rooms.ReportService.html"><code>ReportService</code></a> for the dashboard's review list, and logged.</p>
+<p>Media of other servers: <a class="xref" href="../../api/Uniform.Matrix.Server.Media.MediaService.html"><code>MediaService</code></a> fetches it on first use with <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.FederationClient.html#Uniform_Matrix_Server_Federation_FederationClient_DownloadAsync_"><code>FederationClient.DownloadAsync</code></a> from <code>/_matrix/federation/v1/media/download</code> (a <code>multipart/mixed</code> answer: metadata, then the file; redirects to elsewhere are not followed), falling back to the legacy unsigned <code>/_matrix/media/v3/download</code> of older servers, and keeps it under an ID of its own in <code>RemoteMedia</code>; thumbnails of it are made here. The federation media endpoints serve local media the same way. The unauthenticated legacy reads, when turned on, serve local media only, so nobody without an account can make the server fetch from others.</p>
+<p><a class="xref" href="../../api/Uniform.Matrix.Server.Federation.FederationSender.html"><code>FederationSender</code></a> keeps how far it got in <code>FederationProgress</code>, so events stored just before a stop are still sent after the restart.</p>
+<p>Older clients use <code>r0</code> paths and unstable key backup and cross-signing paths; <a class="xref" href="../../api/Uniform.Matrix.Server.Http.LegacyPaths.html"><code>LegacyPaths</code></a> maps them to <code>v3</code> before routing. Requests no endpoint knows are logged with method and path, without the query.</p>
+<p>Room version 12 (<a class="xref" href="../../api/Uniform.Matrix.Protocol.Server.RoomVersion.html#Uniform_Matrix_Protocol_Server_RoomVersion_V12"><code>RoomVersion.V12</code></a>, <a class="xref" href="../../api/Uniform.Matrix.Protocol.Server.RoomVersion.html#Uniform_Matrix_Protocol_Server_RoomVersion_RoomIdIsCreateHash"><code>RoomIdIsCreateHash</code></a>): the room ID is <code>!</code> and the create event's hash, the create event has no <code>room_id</code> and is left out of <code>auth_events</code>, and the creators (the sender and <code>additional_creators</code>, see <a class="xref" href="../../api/Uniform.Matrix.Protocol.Server.AuthRules.html#Uniform_Matrix_Protocol_Server_AuthRules_Creators_"><code>AuthRules.Creators</code></a>) have unlimited power and cannot be listed in power levels. Such rooms can be joined through <code>via</code> servers, since their IDs name no server; creating them here is refused until room creation builds the create event before the room's row. <code>FederationTests</code> run two servers in memory whose federation clients reach each other through a test handler.</p>
+<p>HTTPS comes from <a class="xref" href="../../api/Uniform.Matrix.Server.Http.TlsCertificate.html"><code>TlsCertificate</code></a> (in <code>Http/</code>), which reads the PEM files of <code>Tls:*</code>, sends the intermediates with the certificate (other servers check the chain) and reads the files again within a minute of a renewal.</p>
+<h2 id="receiving-events-forks-and-state-resolution">Receiving events, forks and state resolution</h2>
+<p><a class="xref" href="../../api/Uniform.Matrix.Server.Rooms.EventSender.html#Uniform_Matrix_Server_Rooms_EventSender_AcceptEventAsync_"><code>EventSender.AcceptEventAsync</code></a> (in <code>EventSender.Remote.cs</code>) checks a received event in the spec's order:</p>
+<ol>
+<li>Its content hash, and the sender server's signature.</li>
+<li>Its own auth events: all stored here, of this room, each once, and of the kinds its type needs; the auth rules must allow it against them.</li>
+<li>The state before it: the state after each of its previous events, merged when they differ, with the state its server reported for previous events not here. The auth rules must allow it against that state. Events failing 1–3 are rejected and not stored.</li>
+<li>The room's current state: when that no longer allows the event, as when its sender was banned meanwhile on another server, the event is stored <a href="https://spec.matrix.org/latest/server-server-api/#soft-failure">soft-failed</a>. Soft-failed events stay in the room graph but are not shown and not built on; a global query filter on <code>EventRow.SoftFailed</code> hides them, and the few queries that need them ignore it.</li>
+</ol>
+<p>Each event keeps the state groups before and after it (<code>StateGroupBefore</code>, <code>StateGroup</code>); <code>/state_ids</code> answers with the state before, as other servers expect. When the room has several forward extremities, its current state is merged from their states by <a class="xref" href="../../api/Uniform.Matrix.Protocol.Server.StateResolution.html"><code>StateResolution</code></a> in <a class="xref" href="../Uniform.Matrix.Protocol.Server/index.html"><code>Uniform.Matrix.Protocol.Server</code></a>. Sync sends state that changed without the timeline showing it, as after such a merge, in the room's <code>state</code>.</p>
+<p>Room ACLs (<code>m.room.server_acl</code>) are checked by <a class="xref" href="../../api/Uniform.Matrix.Server.Federation.RoomAcls.html"><code>RoomAcls</code></a> for the requesting server: joins, leaves, invites and history are refused, and its events, typing and receipts in <code>/send</code> are dropped for rooms whose ACL denies it.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tagcode/Uniform.Chat/blob/v0.1.50/docs/Uniform.Chat/Uniform.Matrix.Server/federation.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      <span>Uniform Chat</span>
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
