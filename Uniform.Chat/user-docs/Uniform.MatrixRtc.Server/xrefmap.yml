@@ -1,0 +1,15 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Uniform.MatrixRtc.Server.Article
+  name: MatrixRTC authorization server
+  href: index.html
+- uid: Uniform.MatrixRtc.Server.Homeservers.Article
+  name: Homeservers
+  href: articles/homeservers.html
+- uid: Uniform.MatrixRtc.Server.Running.Article
+  name: Running
+  href: articles/running.html
+- uid: Uniform.MatrixRtc.Server.Settings.Article
+  name: Settings
+  href: articles/settings.html
