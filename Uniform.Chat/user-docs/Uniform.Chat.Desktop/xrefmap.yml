@@ -1,0 +1,36 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Uniform.Chat.Desktop.Administration.Article
+  name: Server administration
+  href: articles/administration.html
+- uid: Uniform.Chat.Desktop.Article
+  name: Desktop Client
+  href: index.html
+- uid: Uniform.Chat.Desktop.Calls.Article
+  name: Voice and video calls
+  href: articles/calls.html
+- uid: Uniform.Chat.Desktop.GettingStarted.Article
+  name: Getting started
+  href: articles/getting-started.html
+- uid: Uniform.Chat.Desktop.Install.Article
+  name: Installing
+  href: articles/install.html
+- uid: Uniform.Chat.Desktop.Messages.Article
+  name: Messages and files
+  href: articles/messages.html
+- uid: Uniform.Chat.Desktop.Notifications.Article
+  name: Notifications
+  href: articles/notifications.html
+- uid: Uniform.Chat.Desktop.Phones.Article
+  name: Phones and narrow windows
+  href: articles/phones.html
+- uid: Uniform.Chat.Desktop.Rooms.Article
+  name: Rooms
+  href: articles/rooms.html
+- uid: Uniform.Chat.Desktop.Security.Article
+  name: Security
+  href: articles/security.html
+- uid: Uniform.Chat.Desktop.Settings.Article
+  name: Settings
+  href: articles/settings.html

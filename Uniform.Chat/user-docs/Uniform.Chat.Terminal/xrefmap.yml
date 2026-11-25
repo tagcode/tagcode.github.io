@@ -1,0 +1,39 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Uniform.Chat.Terminal.Article
+  name: Terminal Client
+  href: index.html
+- uid: Uniform.Chat.Terminal.Commands.Article
+  name: Commands
+  href: articles/commands.html
+- uid: Uniform.Chat.Terminal.Encryption.Article
+  name: Encryption and devices
+  href: articles/encryption.html
+- uid: Uniform.Chat.Terminal.Files.Article
+  name: Files and images
+  href: articles/files.html
+- uid: Uniform.Chat.Terminal.GettingStarted.Article
+  name: Getting started
+  href: articles/getting-started.html
+- uid: Uniform.Chat.Terminal.Install.Article
+  name: Installing
+  href: articles/install.html
+- uid: Uniform.Chat.Terminal.Interface.Article
+  name: Interface
+  href: articles/interface.html
+- uid: Uniform.Chat.Terminal.Joining.Article
+  name: Joining rooms
+  href: articles/joining.html
+- uid: Uniform.Chat.Terminal.Messages.Article
+  name: Messages
+  href: articles/messages.html
+- uid: Uniform.Chat.Terminal.Rooms.Article
+  name: Room administration
+  href: articles/rooms.html
+- uid: Uniform.Chat.Terminal.ServerAdmin.Article
+  name: Server administration
+  href: articles/server-admin.html
+- uid: Uniform.Chat.Terminal.Settings.Article
+  name: Settings
+  href: articles/settings.html
